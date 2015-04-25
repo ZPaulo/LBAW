@@ -5,6 +5,7 @@
   if (!$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'Invalid login';
     $_SESSION['form_values'] = $_POST;
+    echo "<script type='text/javascript'>alert('invalid');</script>";
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   }
@@ -14,6 +15,7 @@
   
   if (isLoginCorrect($username, $password)) {
     $_SESSION['username'] = $username;
+    echo "<script type='text/javascript'>alert('okidoki');</script>";
     $_SESSION['success_messages'][] = 'Login successful';  
   } else {
     $_SESSION['error_messages'][] = 'Login failed';  
