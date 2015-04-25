@@ -3,8 +3,8 @@
   include_once($BASE_DIR .'database/users.php');  
   include 'ChromePhp.php';
 
-  ini_set('display_errors', 'On');
-  error_reporting(E_ALL | E_STRICT);
+ echo "<script type='text/javascript'>alert('okidoki');</script>";
+  ChromePhp::warn('something went wrong!');
 
   if (!$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'Invalid login';
