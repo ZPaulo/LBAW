@@ -2,6 +2,9 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
 
+  ini_set('display_errors', 'On');
+  error_reporting(E_ALL | E_STRICT);
+
   if (!$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'Invalid login';
     $_SESSION['form_values'] = $_POST;
