@@ -6,7 +6,7 @@
   $BASE_DIR = 'opt/lbaw/lbaw1422/public_html/LBAW'; 
   $BASE_URL = '/~lbaw1422/LBAW'; 
 
-  $conn = new PDO('pgsql:host=vdbm;dbname=~lbaw1422', 'lbaw1422', 'nW948ne7');
+  $conn = new PDO('pgsql:host=vdbm;dbname=lbaw1422', 'lbaw1422', 'nW948ne7');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
