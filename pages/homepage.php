@@ -76,6 +76,7 @@
 							</ul></li>
 						<li class="topbar-devider"></li>
 						<li><a href="page_login.html">Login</a></li>
+						<li><a href="page_registration.html">Register</a></li>
 					</ul>
 				</div>
 				<!-- End Topbar -->
