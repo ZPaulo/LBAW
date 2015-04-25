@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AlugueUmCarro Webpage</title>
+<title>AlugueUmCarro</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -22,7 +22,7 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	href="../plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/style.css">
 
 <!-- CSS Header and Footer -->
@@ -30,19 +30,19 @@
 <link rel="stylesheet" href="../css/footers/footer-v1.css">
 
 <!-- CSS Implementing Plugins -->
-<link rel="stylesheet" href="assets/plugins/animate.css">
-<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="../plugins/animate.css">
+<link rel="stylesheet" href="../plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
-	href="assets/plugins/font-awesome/css/font-awesome.min.css">
+	href="../plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="assets/plugins/parallax-slider/css/parallax-slider.css">
+	href="../plugins/parallax-slider/css/parallax-slider.css">
 <link rel="stylesheet"
-	href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+	href="../plugins/owl-carousel/owl-carousel/owl.carousel.css">
 <link rel="stylesheet"
-	href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+	href="../plugins/sky-forms-pro/skyforms/css/sky-forms.css">
 <link rel="stylesheet"
-	href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-<!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+	href="../plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+<!--[if lt IE 9]><link rel="stylesheet" href="../plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 <!-- CSS Theme -->
 <link rel="stylesheet" href="../css/theme-colors/default.css"
@@ -305,25 +305,25 @@
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript"
-		src="assets/plugins/jquery/jquery.min.js"></script>
+		src="../plugins/jquery/jquery.min.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+		src="../plugins/jquery/jquery-migrate.min.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		src="../plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!-- JS Implementing Plugins -->
-	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+	<script type="text/javascript" src="../plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="../plugins/smoothScroll.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/parallax-slider/js/modernizr.js"></script>
+		src="../plugins/parallax-slider/js/modernizr.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+		src="../plugins/parallax-slider/js/jquery.cslider.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+		src="../plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+		src="../plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+	<script src="../plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
 	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+		src="../plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 	<!-- JS Customization -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- JS Page Level -->
@@ -346,9 +346,9 @@
 	</script>
 	<!--[if lt IE 9]>
 >>>>>>> origin/master
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="../plugins/respond.js"></script>
+    <script src="../plugins/html5shiv.js"></script>
+    <script src="../plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>
