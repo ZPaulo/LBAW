@@ -2,7 +2,7 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
   include 'ChromePhp.php';
-  
+
   ini_set('display_errors', 'On');
   error_reporting(E_ALL | E_STRICT);
 
@@ -22,7 +22,7 @@
     echo "<script type='text/javascript'>alert('okidoki');</script>";
     $_SESSION['success_messages'][] = 'Login successful';  
   } else {
-    ChromePhp::warn('something went wrong!')
+    ChromePhp::warn('something went wrong!');
     $_SESSION['error_messages'][] = 'Login failed';  
   }
   header('Location: ' . $_SERVER['HTTP_REFERER']);
