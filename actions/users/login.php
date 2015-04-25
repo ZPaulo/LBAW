@@ -18,7 +18,9 @@
     echo "<script type='text/javascript'>alert('okidoki');</script>";
     $_SESSION['success_messages'][] = 'Login successful';  
   } else {
-    echo "<script type='text/javascript'>alert('nope');</script>";
+    echo '<script language="javascript">';
+    echo 'alert("nop")';
+    echo '</script>';
     $_SESSION['error_messages'][] = 'Login failed';  
   }
   header('Location: ' . $_SERVER['HTTP_REFERER']);
