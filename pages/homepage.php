@@ -60,7 +60,7 @@
 			<div class="container">
 				<!-- Logo -->
 				<a class="logo" href="index-2.html"> <img
-					src="assets/img/logo2.png" alt="Logo">
+					src="../images/assets/logo2.png" alt="Logo">
 				</a>
 				<!-- End Logo -->
 				<!-- Topbar -->
@@ -213,7 +213,7 @@
 						<!-- About -->
 						<div class="col-md-3 md-margin-bottom-40">
 							<a href="index-2.html"><img id="logo-footer"
-								class="footer-logo" src="assets/img/logo2.png" alt=""></a>
+								class="footer-logo" src="../images/assets/logo2.png" alt=""></a>
 							<p>O minja é o pior Nasus e consegue feedar em todos os
 								jogos. O Zé é sombrio e isso faz com que ele não saia de silver.</p>
 						</div>
@@ -325,16 +325,16 @@
 	<script
 		src="../plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 	<!-- JS Customization -->
-	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="../javascript/custom.js"></script>
 	<!-- JS Page Level -->
-	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+	<script type="text/javascript" src="../javascript/app.js"></script>
+	<script type="text/javascript" src="../javascript/plugins/owl-carousel.js"></script>
 	<script type="text/javascript"
-		src="assets/js/plugins/style-switcher.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+		src="../javascript/plugins/style-switcher.js"></script>
+	<script type="text/javascript" src="../javascript/plugins/datepicker.js"></script>
 	<script type="text/javascript"
-		src="assets/js/plugins/parallax-slider.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+		src="../javascript/plugins/parallax-slider.js"></script>
+	<script type="text/javascript" src="../javascript/plugins/datepicker.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
