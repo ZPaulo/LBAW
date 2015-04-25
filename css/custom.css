@@ -1,0 +1,21 @@
+/* Add here all your css styles (customizations) */
+
+#sky-form4 {
+	position: absolute;
+	min-width: 500px;
+	top: -300px;
+	left: 30%;
+	border: 3px solid #eee;
+}
+
+@media (max-width: 1200px) {
+	#sky-form4 {
+		left: 10%;
+		min-width: 20%;
+		margin-right: 10%;
+	}
+}
+
+.emptyspace {
+	height: 250px;
+}

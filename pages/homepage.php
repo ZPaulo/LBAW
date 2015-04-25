@@ -1,5 +1,5 @@
 <?php
-  include_once('../../config/init.php');
+  include_once('../config/init.php');
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +23,11 @@
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
 	href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 
 <!-- CSS Header and Footer -->
-<link rel="stylesheet" href="assets/css/headers/header-default.css">
-<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+<link rel="stylesheet" href="../css/headers/header-default.css">
+<link rel="stylesheet" href="../css/footers/footer-v1.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet" href="assets/plugins/animate.css">
@@ -45,12 +45,12 @@
 <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 <!-- CSS Theme -->
-<link rel="stylesheet" href="assets/css/theme-colors/default.css"
+<link rel="stylesheet" href="../css/theme-colors/default.css"
 	id="style_color">
-<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+<link rel="stylesheet" href="../css/theme-skins/dark.css">
 
 <!-- CSS Customization -->
-<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
