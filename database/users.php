@@ -11,8 +11,10 @@
     $stmt->execute(array($username));
     $id = $stmt->fetch();
 
+    echo $id;
+/*
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array(NULL,$id);
+    $stmt->execute(array(NULL,$id);*/
   }
 
   function isLoginCorrect($username, $password) {
