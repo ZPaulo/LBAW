@@ -2,9 +2,6 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
 
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
   if (!$_POST['username'] || !$_POST['name'] || !$_POST['password'] || !$_POST['email'] || !$_POST['cellphone'] || !$_POST['adress'] ) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;

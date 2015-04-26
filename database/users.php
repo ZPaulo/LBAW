@@ -1,21 +1,18 @@
 <?php
   
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
-  
+
   function createUser($realname, $username, $password, $email, $cellphone, $adress) {
     global $conn;
   
-    $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute(array($realname, $username, sha1($password), $email, $cellphone, $adress));
-
+    $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?,?)");
+    $stmt->execute(array($realname, $username, sha1($password), $email, $cellphone, $adress,0));
+/*
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
     $id = $stmt->fetch();
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array(NULL,$id);
+    $stmt->execute(array(NULL,$id);*/
   }
 
   function isLoginCorrect($username, $password) {
