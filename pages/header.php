@@ -5,7 +5,7 @@
 <div class="header">
 			<div class="container">
 				<!-- Logo -->
-				<a class="logo" href="index-2.html"> <img
+				<a class="logo" href=<?php echo '"'.$BASE_URL.'"'; ?>> <img
 					src="../images/assets/logo2.png" alt="Logo">
 				</a>
 				<!-- End Logo -->
