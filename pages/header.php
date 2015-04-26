@@ -120,7 +120,7 @@
 					                       <div class="row">
 					                           <div class="col-lg-6 checkbox">
 					                               <label>
-					                                   <input type="checkbox"> 
+					                                   <input type="checkbox" required> 
 					                                   I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
 					                               </label>                        
 					                           </div>
