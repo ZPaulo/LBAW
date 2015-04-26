@@ -9,12 +9,12 @@
 
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
-    $id = $stmt->fetch();
-
+    $id = $stmt->fetch()["pessoaid"];
+    echo $id;
     $default = true;
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array($default,$id["pessoaid"]);
+    $stmt->execute(array($default,$id);
   }
 
   function isLoginCorrect($username, $password) {
