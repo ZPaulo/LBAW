@@ -84,7 +84,7 @@
 									else{
 										echo '<a href="page_login.html">Login</a></li> ';
 										echo '<li class="topbar-devider"></li>';
-										echo '<li><a href="page_registration.html">Register</a></li>'
+										echo '<li><a href="page_registration.html">Register</a></li>';
 									}
 										?>
 					</ul>
