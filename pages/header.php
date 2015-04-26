@@ -27,7 +27,7 @@
 									echo '<li> <a href="../actions/users/logout.php">Logout</a></li> ';
 									}
 									else{
-										echo '<a data-target="#myModal">Login</a></li> ';
+										echo '<a href="#" data-toggle="modal" data-target="#myModal">Login</a></li> ';
 										echo '<li class="topbar-devider"></li>';
 										echo '<li><a href="page_registration.php">Register</a></li>';
 									}
