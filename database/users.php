@@ -11,7 +11,7 @@
     $stmt->execute(array($username));
     $id = $stmt->fetch();
 
-    echo var_dump($id);
+    echo $id["pessoaid"];
 /*
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
     $stmt->execute(array(NULL,$id);*/
