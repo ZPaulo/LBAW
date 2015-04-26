@@ -76,10 +76,10 @@
 							</ul></li>
 						<li class="topbar-devider"></li>
 						<li><?php if(isset($_SESSION['username'])){
-									echo '<a href="page_login.html">'.$_SESSION['username'].'</a>)'; 
+								echo '<a href="page_login.html">Login</a>';
 									}
 									else{
-										echo '<a href="page_login.html">Login</a>';
+											echo '<a href="page_login.html">'.$_SESSION['username'].'</a>)'; 
 									}
 										?></li> 
 						<li class="topbar-devider"></li>
