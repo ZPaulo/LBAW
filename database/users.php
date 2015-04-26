@@ -7,7 +7,7 @@
     echo $password;
     echo $email;
     echo $cellphone;
-    echo $adress;
+    echo $adress;/*
     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute(array($realname, $username, sha1($password), $email, $cellphone, $adress));
 
@@ -16,7 +16,7 @@
     $id = $stmt->fetch();
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array(NULL,$id);
+    $stmt->execute(array(NULL,$id);*/
   }
 
   function isLoginCorrect($username, $password) {
