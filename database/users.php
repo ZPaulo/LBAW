@@ -6,13 +6,13 @@
   
     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute(array($realname, $username, sha1($password), $email, $cellphone, $adress));
-/*
+
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
     $id = $stmt->fetch();
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array(NULL,$id);*/
+    $stmt->execute(array(NULL,$id);
   }
 
   function isLoginCorrect($username, $password) {
