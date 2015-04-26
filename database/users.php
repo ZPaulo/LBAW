@@ -10,10 +10,10 @@
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
     $id = $stmt->fetch()["pessoaid"];
-    $default = "true";
+    $default = true;
 
-    $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array($default,$id));
+    $stmt1 = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
+    $stmt1->execute(array($default,$id));
   }
 
   function isLoginCorrect($username, $password) {
