@@ -1,6 +1,6 @@
 <?php
-  include_once('../config/init.php');
   session_start();
+  include_once('../config/init.php');
 ?>
 <div class="header">
 			<div class="container">
