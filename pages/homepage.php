@@ -77,14 +77,16 @@
 							</ul></li>
 						<li class="topbar-devider"></li>
 						<li><?php if(isset($_SESSION['username'])){
-									echo '<a href="page_login.html">'.$_SESSION['username'].'</a>'; 
+									echo '<a href="page_login.html">'.$_SESSION['username'].'</a></li> '; 
+									echo '<li class="topbar-devider"></li>';
+									echo '<li> <a href="../actions/users/logout.php">Logout</a></li> ';
 									}
 									else{
-										echo '<a href="page_login.html">Login</a>';
+										echo '<a href="page_login.html">Login</a></li> ';
+										echo '<li class="topbar-devider"></li>';
+										echo '<li><a href="page_registration.html">Register</a></li>'
 									}
-										?></li> 
-						<li class="topbar-devider"></li>
-						<li><a href="page_registration.html">Register</a></li>
+										?>
 					</ul>
 				</div>
 				<!-- End Topbar -->
