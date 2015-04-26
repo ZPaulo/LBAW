@@ -18,14 +18,14 @@
 							</ul></li>
 						<li class="topbar-devider"></li>
 						<li><?php if(isset($_SESSION['username'])){
-									echo '<a href="page_login.html">'.$_SESSION['username'].'</a></li> '; 
+									echo '<a href="page_login.php">'.$_SESSION['username'].'</a></li> '; 
 									echo '<li class="topbar-devider"></li>';
 									echo '<li> <a href="../actions/users/logout.php">Logout</a></li> ';
 									}
 									else{
-										echo '<a href="page_login.html">Login</a></li> ';
+										echo '<a href="page_login.php">Login</a></li> ';
 										echo '<li class="topbar-devider"></li>';
-										echo '<li><a href="page_registration.html">Register</a></li>';
+										echo '<li><a href="page_registration.php">Register</a></li>';
 									}
 										?>
 					</ul>
