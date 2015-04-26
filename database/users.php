@@ -12,8 +12,11 @@
     $id = $stmt->fetch()["pessoaid"];
     $default = true;
 
-    $stmt1 = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt1->execute(array($default,$id));
+echo gettype($id);
+echo gettype($default);
+
+    $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
+    $stmt->execute(array($default,$id));
   }
 
   function isLoginCorrect($username, $password) {
