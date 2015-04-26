@@ -12,9 +12,6 @@
     $id = $stmt->fetch()["pessoaid"];
     $default = true;
 
-echo gettype($id);
-echo gettype($default);
-
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
     $stmt->execute(array($default,$id));
   }
