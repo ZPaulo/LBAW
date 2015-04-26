@@ -75,7 +75,7 @@
 								<li><a href="#">German</a></li>
 							</ul></li>
 						<li class="topbar-devider"></li>
-						<li><?php if(isset($_SESSION['username']){
+						<li><?php if(isset($_SESSION['username'])){
 									echo '<a href="page_login.html">'.$_SESSION['username'].'</a>)'; 
 									}
 									else{
