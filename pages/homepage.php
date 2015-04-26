@@ -1,8 +1,3 @@
-<?php
-  include_once('../config/init.php');
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
