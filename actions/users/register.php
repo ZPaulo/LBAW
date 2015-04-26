@@ -6,8 +6,6 @@
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
     //header("Location: $BASE_URL" . 'pages/users/register.php');
-
-echo '<script language="javascript">console.log("nop");</script>';
     exit;
   }
 

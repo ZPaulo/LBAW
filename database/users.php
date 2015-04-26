@@ -10,8 +10,7 @@
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
     $id = $stmt->fetch()["pessoaid"];
-    echo $id;
-    $default = true;
+    $default = "true";
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
     $stmt->execute(array($default,$id));
