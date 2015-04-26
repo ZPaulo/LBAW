@@ -20,5 +20,5 @@
     $_SESSION['error_messages'][] = 'Login failed';  
   }
   //header('Location: ' . $_SERVER['HTTP_REFERER']);
-  header('Location: ' . $BASE_DIR);
+  header('Location: ' . $BASE_URL);
 ?>
