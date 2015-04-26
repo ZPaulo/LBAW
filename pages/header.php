@@ -27,52 +27,111 @@
 									echo '<li> <a href="../actions/users/logout.php">Logout</a></li> ';
 									}
 									else{
-										echo '<a href="#" data-toggle="modal" data-target="#myModal">Login</a></li> ';
+										echo '<a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li> ';
 										echo '<li class="topbar-devider"></li>';
-										echo '<li><a href="page_registration.php">Register</a></li>';
+										echo '<li><a href="#" data-toggle="modal" data-target="#registrationModal">Register</a></li>';
 									}
 										?>
 					</ul>
 				</div>
 				<!-- End Topbar -->
 				<!-- Modal -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 				    <div class="modal-content">
-				     <div class="container content">		
-    	<div class="row">
-            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <form class="reg-page" action="../actions/users/login.php" method="POST">
-                    <div class="reg-header">            
-                        <h2>Login to your account</h2>
-                    </div>
+					     <div class="container content">		
+					    	<div class="row">
+					            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+					                <form class="reg-page" action="../actions/users/login.php" method="POST">
+					                    <div class="reg-header">            
+					                        <h2>Login to your account</h2>
+					                    </div>
 
-                    <div class="input-group margin-bottom-20">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" placeholder="Username" name="username" class="form-control">
-                    </div>                    
-                    <div class="input-group margin-bottom-20">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type="password" placeholder="Password" name="password" class="form-control">
-                    </div>                    
+					                    <div class="input-group margin-bottom-20">
+					                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+					                        <input type="text" placeholder="Username" name="username" class="form-control">
+					                    </div>                    
+					                    <div class="input-group margin-bottom-20">
+					                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					                        <input type="password" placeholder="Password" name="password" class="form-control">
+					                    </div>                    
 
-                    <div class="row">
-                        <div class="col-md-6 checkbox">
-                            <label><input type="checkbox"> Stay signed in</label>                        
-                        </div>
-                        <div class="col-md-6">
-                            <button class="btn-u pull-right" type="submit">Login</button>                        
-                        </div>
-                    </div>
+					                    <div class="row">
+					                        <div class="col-md-6 checkbox">
+					                            <label><input type="checkbox"> Stay signed in</label>                        
+					                        </div>
+					                        <div class="col-md-6">
+					                            <button class="btn-u pull-right" type="submit">Login</button>                        
+					                        </div>
+					                    </div>
 
-                    <hr>
+					                    <hr>
 
-                    <h4>Forget your Password ?</h4>
-                    <p>no worries, <a class="color-green" href="#">click here</a> to reset your password.</p>
-                </form>            
-            </div>
-        </div><!--/row-->
-    </div><!--/container-->		
+					                    <h4>Forget your Password ?</h4>
+					                    <p>no worries, <a class="color-green" href="#">click here</a> to reset your password.</p>
+					                </form>            
+					            </div>
+					        </div><!--/row-->
+					    </div><!--/container-->		
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+					    <div class="container content">
+					           <div class="row">
+					               <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					                   <form class="reg-page" action="../actions/users/register.php" method="POST">
+					                       <div class="reg-header">
+					                           <h2>Register a new account</h2>
+					                           <p>Already Signed Up? Click <a href="page_login.html" class="color-green">Sign In</a> to login your account.</p>                    
+					                       </div>
+
+					                       <label>Name</label>
+					                       <input type="text" name="name" class="form-control margin-bottom-20" required>
+					                      
+					                       <label>Username</label>
+					                       <input type="text" name="username" class="form-control margin-bottom-20" required>
+					                      
+					                       <label>Email Address <span class="color-red">*</span></label>
+					                       <input type="text" name="email" class="form-control margin-bottom-20" required>
+
+					                       <label>Cellphone number <span class="color-red">*</span></label>
+					                       <input type="text" name="cellphone" class="form-control margin-bottom-20" required>
+
+					                       <label>Adress <span class="color-red">*</span></label>
+					                       <input type="text" name="adress" class="form-control margin-bottom-20" required>
+
+					                       <div class="row">
+					                           <div class="col-sm-6">
+					                               <label>Password <span class="color-red">*</span></label>
+					                               <input type="password" class="form-control margin-bottom-20" required>
+					                           </div>
+					                           <div class="col-sm-6">
+					                               <label>Confirm Password <span class="color-red">*</span></label>
+					                               <input type="password" name = "password" class="form-control margin-bottom-20" required>
+					                           </div>
+					                       </div>
+
+					                       <hr>
+
+					                       <div class="row">
+					                           <div class="col-lg-6 checkbox">
+					                               <label>
+					                                   <input type="checkbox"> 
+					                                   I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
+					                               </label>                        
+					                           </div>
+					                           <div class="col-lg-6 text-right">
+					                               <button class="btn-u" type="submit">Register</button>                        
+					                           </div>
+					                       </div>
+					                   </form>
+					               </div>
+					           </div>
+					       </div><!--/container-->			
 				    </div>
 				  </div>
 				</div>
