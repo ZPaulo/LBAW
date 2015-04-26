@@ -41,7 +41,7 @@
 				    <div class="modal-content">
 					     <div class="container content">		
 					    	<div class="row">
-					            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+					            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 login">
 					                <form class="reg-page" action="../actions/users/login.php" method="POST">
 					                    <div class="reg-header">            
 					                        <h2>Login to your account</h2>
@@ -82,7 +82,7 @@
 				    <div class="modal-content">
 					    <div class="container content">
 					           <div class="row">
-					               <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					               <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 regist">
 					                   <form class="reg-page" action="../actions/users/register.php" method="POST">
 					                       <div class="reg-header">
 					                           <h2>Register a new account</h2>
