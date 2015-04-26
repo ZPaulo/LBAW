@@ -5,7 +5,7 @@
 					<!-- About -->
 					<div class="col-md-3 md-margin-bottom-40">
 						<a href="index-2.html"><img id="logo-footer"
-							class="footer-logo" src="assets/img/logo2.png" alt=""></a>
+							class="footer-logo" src="../images/assets/logo2.png" alt=""></a>
 						<p>O minja é o pior Nasus e consegue feedar em todos os
 							jogos. O Zé é sombrio e isso faz com que ele não saia de silver.</p>
 					</div>

@@ -2,7 +2,7 @@
 	<div class="container">
 		<!-- Logo -->
 		<a class="logo" href="index-2.html"> <img
-			src="assets/img/logo2.png" alt="Logo">
+			src="../images/assets/logo2.png" alt="Logo">
 		</a>
 		<!-- End Logo -->
 		<!-- Topbar -->
