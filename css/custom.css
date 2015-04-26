@@ -19,3 +19,9 @@
 .emptyspace {
 	height: 250px;
 }
+
+@media (min-width: 768px){
+.col-sm-offset-3 {
+  margin-left: 10%;
+}
+}
