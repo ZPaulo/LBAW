@@ -1,7 +1,7 @@
 <?php
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
-
+  session_start();
 
   if (!$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'Invalid login';
@@ -19,7 +19,6 @@
   } else {
     $_SESSION['error_messages'][] = 'Login failed';  
   }
-  echo $_SESSION['username'];
-  //header('Location: ' . $_SERVER['HTTP_REFERER']);
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
   //header('Location: ' . $BASE_URL);
 ?>
