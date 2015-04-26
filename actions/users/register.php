@@ -7,7 +7,7 @@
   if (!$_POST['username'] || !$_POST['name'] || !$_POST['password'] || !$_POST['email'] || !$_POST['cellphone'] || !$_POST['adress'] ) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL" . 'pages/users/register.php');
+    //header("Location: $BASE_URL" . 'pages/users/register.php');
 
 echo '<script language="javascript">console.log("nop");</script>';
     exit;
