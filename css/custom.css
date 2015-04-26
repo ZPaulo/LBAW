@@ -21,13 +21,13 @@
 }
 
 @media (min-width: 768px){
-.col-sm-offset-3 .login {
+.col-sm-offset-3  {
   margin-left: 10%;
 }
 }
 
 @media (min-width: 768px){
-.col-sm-offset-2 .regist{
+.col-sm-offset-2 {
    margin-left: 0%; 
 }
 }
