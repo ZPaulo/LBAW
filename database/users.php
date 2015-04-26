@@ -14,7 +14,7 @@
     $default = true;
 
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
-    $stmt->execute(array($default,$id);
+    $stmt->execute(array($default,$id));
   }
 
   function isLoginCorrect($username, $password) {
