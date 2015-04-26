@@ -2,8 +2,8 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
 
-
-
+echo '<script language="javascript">console.log("fds");</script>';
+echo '<script language="javascript">alert("fds");</script>';
   if (!$_POST['username'] || !$_POST['name'] || !$_POST['password'] || !$_POST['email'] || !$_POST['cellphone'] || !$_POST['adress'] ) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
