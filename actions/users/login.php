@@ -19,5 +19,5 @@
   } else {
     $_SESSION['error_messages'][] = 'Login failed';  
   }
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
+  //header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

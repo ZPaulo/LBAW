@@ -79,7 +79,7 @@
 									echo '<a href="page_login.html">'.$_SESSION['username'].'</a>)'; 
 									}
 									else{
-										echo '<a href="page_login.html">Login</a>)';
+										echo '<a href="page_login.html">Login</a>';
 									}
 										?></li> 
 						<li class="topbar-devider"></li>
