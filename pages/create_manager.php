@@ -1,7 +1,3 @@
-<?php if($_SESSION['type']!='admin'){
-	//header('Location: homepage.php');
-}?>
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -9,10 +5,9 @@
 <html lang="en">
 <!--<![endif]-->
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/portfolio_4_columns_grid_text.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:47 GMT -->
+<!-- Mirrored from htmlstream.com/preview/unify-v1.7/shortcode_form_states.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:35:39 GMT -->
 <head>
-<title>Portfolio 4 Columns Grid Text | Unify - Responsive
-	Website Template</title>
+<title>Form States | Unify - Responsive Website Template</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -42,9 +37,10 @@
 <link rel="stylesheet"
 	href="assets/plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+	href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
 <link rel="stylesheet"
-	href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+	href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+<!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 <!-- CSS Theme -->
 <link rel="stylesheet" href="assets/css/theme-colors/default.css"
@@ -55,13 +51,11 @@
 <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body class="header-fixed">
-	<!--=== Style Switcher ===-->
-	<!--=== End Style Switcher ===-->
+<body>
 
 	<div class="wrapper">
 		<!--=== Header ===-->
-		<div class="header">
+<div class="header">
 			<div class="container">
 				<!-- Logo -->
 				<a class="logo" href="index.html"> <img
@@ -129,7 +123,7 @@
 							onclick="window.location = 'administration.html'">
 								Administration </a>
 							<ul class="dropdown-menu">
-								<li><a href="create_manager.html">Create Manager</a></li>
+								<li class="active"><a href="create_manager.html">Create Manager</a></li>
 								<li><a href="search_manager.html">Search Managers</a></li>
 							</ul></li>
 						<li><i class="search fa fa-search search-btn"></i>
@@ -147,44 +141,90 @@
 				<!--/end container-->
 			</div>
 			<!--/navbar-collapse-->
-		</div>
-		<!--=== End Header ===-->
+		</div>		<!--=== End Header ===-->
 
-		<!--=== Breadcrumbs v3 ===-->
-		<div class="breadcrumbs-v3 img-v1">
-			<div class="container text-center">
-				<h1>Administration</h1>
+		<!--=== Breadcrumbs ===-->
+		<div class="breadcrumbs">
+			<div class="container">
+				<h1 class="pull-left">Create Manager</h1>
+				<ul class="pull-right breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="administration.html">Administration</a></li>
+					<li class="active">Create Manager</li>
+				</ul>
 			</div>
-			<!--/end container-->
 		</div>
-		<!--=== End Breadcrumbs v3 ===-->
+		<!--/breadcrumbs-->
+		<!--=== End Breadcrumbs ===-->
 
-		<!--=== Cube-Portfdlio ===-->
-		<div class="cube-portfolio container margin-bottom-60">
-			<div class="content-xs">
-				<div id="filters-container" class="cbp-l-filters-text content-xs">
-					<div class="cbp-filter-item">
-						<a href="create_manager.php">Create Manager</a>
+		<!--=== Content Part ===-->
+		<div class="container content">
+			<div class="row">
+
+
+				<!-- Begin Content -->
+				<div class="col-md-9">
+					<!-- Tabs -->
+					<div class="tab-v1">
+
+						<div class="tab-content">
+							<!-- Success Forms -->
+							<div class="tab-pane fade in active" id="home-1">
+								<form action="#" class="sky-form">
+									<header>Insert Manager Info</header>
+
+									<fieldset>
+										<section>
+											<label class="label">Manager Name</label> <label
+												class="input state-success"> <input type="text">
+											</label>
+											<div class="note note-success">This is a required
+												field.</div>
+										</section>
+										<section>
+											<label class="label">Manager Password</label> <label
+												class="input state-success"> <input type="text">
+											</label>
+											<div class="note note-success">This is a required
+												field.</div>
+										</section>
+										<section>
+											<label class="label">Confirm Password</label> <label
+												class="input state-success"> <input type="text">
+											</label>
+											<div class="note note-success">This is a required
+												field.</div>
+										</section>
+
+
+									</fieldset>
+
+
+
+									<footer>
+										<button type="submit" class="btn-u btn-u-default">Submit</button>
+										<button type="button" class="btn-u"
+											onclick="window.history.back();">Back</button>
+									</footer>
+								</form>
+								<!--/ Success states for elements -->
+							</div>
+							<!-- End Success Forms -->
+
+
+							<!-- End Disabled Forms -->
+						</div>
 					</div>
-					|
-					<div class="cbp-filter-item">
-						<a href="search_manager.php">Search Manager</a>
-					</div>
+					<!-- End Tabs-->
 				</div>
+				<!-- End Content -->
 			</div>
-			<!--/end Filters Container-->
 		</div>
-		<br> <br> <br> <br>
+		<!--/container-->
+		<!--=== End Content Part ===-->
 
-
-		<!--/end Grid Container-->
-	</div>
-	<!--=== End Cube-Portfdlio ===-->
-
-
-
-	<!--=== Footer Version 1 ===-->
-	<div class="footer-v1">
+		<!--=== Footer Version 1 ===-->
+		<div class="footer-v1">
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -276,9 +316,9 @@
             </div> 
         </div><!--/copyright-->
     </div>
-	<!--=== End Footer Version 1 ===-->
+		<!--=== End Footer Version 1 ===-->
 	</div>
-	<!--/wrapper-->
+	<!--/End Wrapepr-->
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript"
@@ -287,12 +327,10 @@
 		src="assets/plugins/jquery/jquery-migrate.min.js"></script>
 	<script type="text/javascript"
 		src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
+	
 	<!-- JS Implementing Plugins -->
 	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-	<script type="text/javascript"
-		src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 	<script
 		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 	<script
@@ -300,12 +338,11 @@
 	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
 	<script
 		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+	
 	<!-- JS Customization -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- JS Page Level -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript"
-		src="assets/js/plugins/cube-portfolio/cube-portfolio-4.js"></script>
 	<script type="text/javascript"
 		src="assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript">
@@ -318,9 +355,14 @@
     <script src="assets/plugins/respond.js"></script>
     <script src="assets/plugins/html5shiv.js"></script>
     <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+<![endif]-->
+
+	<!--[if lt IE 10]>
+    <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
 <![endif]-->
 
 </body>
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/portfolio_4_columns_grid_text.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:47 GMT -->
+<!-- Mirrored from htmlstream.com/preview/unify-v1.7/shortcode_form_states.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:35:39 GMT -->
 </html>

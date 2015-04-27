@@ -1,7 +1,3 @@
-<?php if($_SESSION['type']!='admin'){
-	//header('Location: homepage.php');
-}?>
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -9,10 +5,9 @@
 <html lang="en">
 <!--<![endif]-->
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/portfolio_4_columns_grid_text.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:47 GMT -->
+<!-- Mirrored from htmlstream.com/preview/unify-v1.7/page_search_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:11 GMT -->
 <head>
-<title>Portfolio 4 Columns Grid Text | Unify - Responsive
-	Website Template</title>
+<title>Table Search | Unify - Responsive Website Template</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -24,8 +19,8 @@
 <link rel="shortcut icon" href="favicon.html">
 
 <!-- Web Fonts -->
-<link rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+<link rel='stylesheet' type='text/css'
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
@@ -41,10 +36,10 @@
 <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
 	href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+<!-- CSS Page Style -->
 <link rel="stylesheet"
-	href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
-<link rel="stylesheet"
-	href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+	href="assets/css/pages/page_search_inner_tables.css">
 
 <!-- CSS Theme -->
 <link rel="stylesheet" href="assets/css/theme-colors/default.css"
@@ -55,9 +50,7 @@
 <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body class="header-fixed">
-	<!--=== Style Switcher ===-->
-	<!--=== End Style Switcher ===-->
+<body>
 
 	<div class="wrapper">
 		<!--=== Header ===-->
@@ -130,7 +123,7 @@
 								Administration </a>
 							<ul class="dropdown-menu">
 								<li><a href="create_manager.html">Create Manager</a></li>
-								<li><a href="search_manager.html">Search Managers</a></li>
+								<li class="active"><a href="search_manager.html">Search Managers</a></li>
 							</ul></li>
 						<li><i class="search fa fa-search search-btn"></i>
 							<div class="search-open">
@@ -150,41 +143,106 @@
 		</div>
 		<!--=== End Header ===-->
 
-		<!--=== Breadcrumbs v3 ===-->
-		<div class="breadcrumbs-v3 img-v1">
-			<div class="container text-center">
-				<h1>Administration</h1>
+		<!--=== Breadcrumbs ===-->
+		<div class="breadcrumbs breadcrumbs-dark">
+			<div class="container">
+				<h1 class="pull-left">Search Managers</h1>
+				<ul class="pull-right breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="administration.html">Administration</a></li>
+					<li class="active">Search Managers</li>
+				</ul>
 			</div>
-			<!--/end container-->
 		</div>
-		<!--=== End Breadcrumbs v3 ===-->
+		<!--=== End Breadcrumbs ===-->
 
-		<!--=== Cube-Portfdlio ===-->
-		<div class="cube-portfolio container margin-bottom-60">
-			<div class="content-xs">
-				<div id="filters-container" class="cbp-l-filters-text content-xs">
-					<div class="cbp-filter-item">
-						<a href="create_manager.php">Create Manager</a>
-					</div>
-					|
-					<div class="cbp-filter-item">
-						<a href="search_manager.php">Search Manager</a>
+		<!--=== Search Block Version 2 ===-->
+		<div class="search-block">
+			<div class="container">
+				<div class="col-md-6 col-md-offset-3">
+					<h2>Search again</h2>
+					<div class="input-group">
+						<input type="text" class="form-control"
+							placeholder="Search Managers ..."> <span
+							class="input-group-btn">
+							<button class="btn-u" type="button">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
 					</div>
 				</div>
 			</div>
-			<!--/end Filters Container-->
 		</div>
-		<br> <br> <br> <br>
+		<!--/container-->
+		<!--=== End Search Block Version 2 ===-->
 
+		<div class="container content-sm">
+			<!-- Begin Table Search v2 -->
 
-		<!--/end Grid Container-->
-	</div>
-	<!--=== End Cube-Portfdlio ===-->
+			<!-- End Table Search v2 -->
 
+			<div style="border-color: #DDDDDD;"
+				class="panel panel-red margin-bottom-40">
+				<div class="panel-heading"
+					style="background: #FFFFFF; border-bottom: solid rgb(221, 221, 221); border-bottom-width: 1px;">
+					<h3 class="panel-title" style="color: black;">
+						<i class="fa fa-user"></i> Managers
+					</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Username</th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Mark</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><button class="btn btn-danger btn-xs">
+										<i class="fa fa-trash-o"></i> Delete
+									</button></td>
+							</tr>
 
+							<tr>
+								<td>2</td>
+								<td>John</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><button class="btn btn-danger btn-xs">
+										<i class="fa fa-trash-o"></i> Delete
+									</button></td>
+							</tr>
 
-	<!--=== Footer Version 1 ===-->
-	<div class="footer-v1">
+							<tr>
+								<td>3</td>
+								<td>Ted</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><button class="btn btn-danger btn-xs">
+										<i class="fa fa-trash-o"></i> Delete
+									</button></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!--=== Footer Version 1 ===-->
+		<div class="footer-v1">
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -276,9 +334,9 @@
             </div> 
         </div><!--/copyright-->
     </div>
-	<!--=== End Footer Version 1 ===-->
+		<!--=== End Footer Version 1 ===-->
 	</div>
-	<!--/wrapper-->
+	<!--/End Wrapepr-->
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript"
@@ -287,25 +345,13 @@
 		src="assets/plugins/jquery/jquery-migrate.min.js"></script>
 	<script type="text/javascript"
 		src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
 	<!-- JS Implementing Plugins -->
 	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-	<script type="text/javascript"
-		src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
 	<!-- JS Customization -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- JS Page Level -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript"
-		src="assets/js/plugins/cube-portfolio/cube-portfolio-4.js"></script>
 	<script type="text/javascript"
 		src="assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript">
@@ -322,5 +368,5 @@
 
 </body>
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/portfolio_4_columns_grid_text.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:47 GMT -->
+<!-- Mirrored from htmlstream.com/preview/unify-v1.7/page_search_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:11 GMT -->
 </html>
