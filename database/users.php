@@ -16,11 +16,11 @@
     $stmt->execute(array($default,$id));
   }
 
-  function isLoginCorrect($username, $password) {
+  function isClientCorrect($username, $password) {
     global $conn;
     $stmt = $conn->prepare("SELECT * 
-                            FROM pessoa 
-                            WHERE username = ? AND hash = ?");
+                            FROM pessoa,cliente
+                            WHERE pessoa.username = ? AND pessoa.pessoaID = cliente.clienteID AND pessoa.hash = ?");
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch() == true;
   }
