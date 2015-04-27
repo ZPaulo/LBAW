@@ -21,8 +21,9 @@
     if($stmt->fetch()==true)
     {
     	header("Location: http://example.com/myOtherPage.php");
+    	error_log("I Love error", 0);
     	$_SESSION['usertype']='user';
-    }
+    } error_log("I dont Love error", 0);
     $_SESSION['username'] = $username;
     $_SESSION['success_messages'][] = 'Login successful';
   } else {
