@@ -81,10 +81,19 @@
           </ul>
         </div>
         <!-- End Topbar -->
-        <!-- Modal -->
+
         {foreach $ERROR_MESSAGES as $error}
-           <script> $("#loginModal").modal('toggle'); </script>
+        {if $error == 'Invalid login' or $error == 'Login failed'}
+        $logError = true;
         {/foreach}
+        {if $logError}
+        <script>
+        $( document ).ready(function() {
+           $("#loginModal").modal('toggle');
+          });
+        </script>
+        {/if}
+       
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -116,11 +125,9 @@
 
                               <hr>
                                <div id="error_messages">
-                              {foreach $ERROR_MESSAGES as $error}
-                                {if $error == 'Invalid login' or $error == 'Login failed'}
+                                {if $logError}
                                     <div> Login failed! </div>
                                 {/if}
-                              {/foreach}
                               </div>
                               <h4>Forget your Password ?</h4>
                               <p>no worries, <a class="color-green" href="#">click here</a> to reset your password.</p>
