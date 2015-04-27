@@ -14,13 +14,15 @@
   $password = $_POST['password'];
   
   if (isLoginCorrect($username, $password)) {
-  	
   	$stmt = $conn->prepare("SELECT *
                             FROM Cliente, Pessoa
-                            WHERE Pessoa.Username = ? AND Pessoa.pessoaID = Cliente.clientID");
-  	echo $username;
+                            WHERE Pessoa.username = ? AND Pessoa.pessoaID = Cliente.clienteID");
     $stmt->execute(array($username) );
-   
+    if($stmt->fetch()==true)
+    {
+    	header("Location: http://example.com/myOtherPage.php");
+    	$_SESSION['usertype']='user';
+    }
     $_SESSION['username'] = $username;
     $_SESSION['success_messages'][] = 'Login successful';
   } else {
