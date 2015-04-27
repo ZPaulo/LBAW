@@ -17,7 +17,8 @@
   	
   	$stmt = $conn->prepare("SELECT *
                             FROM Cliente, Pessoa
-                            WHERE Pessoa.username = ? AND Pessoa.pessoaID = Cliente.clientID");
+                            WHERE Pessoa.Username = ? AND Pessoa.pessoaID = Cliente.clientID");
+  	echo $username;
     $stmt->execute(array($username) );
    
     $_SESSION['username'] = $username;
