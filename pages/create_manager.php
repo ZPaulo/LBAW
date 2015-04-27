@@ -24,31 +24,31 @@
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+	href="../plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
 
 <!-- CSS Header and Footer -->
-<link rel="stylesheet" href="assets/css/headers/header-default.css">
-<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+<link rel="stylesheet" href="../css/headers/header-default.css">
+<link rel="stylesheet" href="../css/footers/footer-v1.css">
 
 <!-- CSS Implementing Plugins -->
-<link rel="stylesheet" href="assets/plugins/animate.css">
-<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="../plugins/animate.css">
+<link rel="stylesheet" href="../plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
-	href="assets/plugins/font-awesome/css/font-awesome.min.css">
+	href="../plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+	href="../plugins/sky-forms-pro/skyforms/css/sky-forms.css">
 <link rel="stylesheet"
-	href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-<!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+	href="../plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+<!--[if lt IE 9]><link rel="stylesheet" href="../plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
 <!-- CSS Theme -->
-<link rel="stylesheet" href="assets/css/theme-colors/default.css"
+<link rel="stylesheet" href="../css/theme-colors/default.css"
 	id="style_color">
-<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+<link rel="stylesheet" href="../css/theme-skins/dark.css">
 
 <!-- CSS Customization -->
-<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
 			<div class="container">
 				<!-- Logo -->
 				<a class="logo" href="index.html"> <img
-					src="assets/img/logo2.png" alt="Logo">
+					src="../images/assets/logo2.png" alt="Logo">
 				</a>
 				<!-- End Logo -->
 				<!-- Topbar -->
@@ -230,7 +230,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index-2.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2.png" alt=""></a>
+                        <a href="index-2.html"><img id="logo-footer" class="footer-logo" src="../images/assets/logo2.png" alt=""></a>
                         <p>O minja é o pior Nasus e consegue feedar em todos os jogos. O Zé é sombrio e isso faz com que ele não saia de silver.</p>
                     </div><!--/col-md-3-->
                     <!-- End About -->
@@ -322,29 +322,29 @@
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript"
-		src="assets/plugins/jquery/jquery.min.js"></script>
+		src="../plugins/jquery/jquery.min.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+		src="../plugins/jquery/jquery-migrate.min.js"></script>
 	<script type="text/javascript"
-		src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		src="../plugins/bootstrap/js/bootstrap.min.js"></script>
 	
 	<!-- JS Implementing Plugins -->
-	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+	<script type="text/javascript" src="../plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="../plugins/smoothScroll.js"></script>
 	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+		src="../plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
-	<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+		src="../plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+	<script src="../plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
 	<script
-		src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+		src="../plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
 	
 	<!-- JS Customization -->
-	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="../javascript/custom.js"></script>
 	<!-- JS Page Level -->
-	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="../javascript/app.js"></script>
 	<script type="text/javascript"
-		src="assets/js/plugins/style-switcher.js"></script>
+		src="../javascript/plugins/style-switcher.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
@@ -352,14 +352,14 @@
 		});
 	</script>
 	<!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-    <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+    <script src="../plugins/respond.js"></script>
+    <script src="../plugins/html5shiv.js"></script>
+    <script src="../plugins/placeholder-IE-fixes.js"></script>
+    <script src="../plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
 <![endif]-->
 
 	<!--[if lt IE 10]>
-    <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+    <script src="../plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
 <![endif]-->
 
 </body>
