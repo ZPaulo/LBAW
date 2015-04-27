@@ -85,6 +85,7 @@
         {foreach $ERROR_MESSAGES as $error}
         {if $error == 'Invalid login' or $error == 'Login failed'}
         $logError = true;
+        {/if}
         {/foreach}
         {if $logError}
         <script>
