@@ -118,6 +118,7 @@
                                   {$error == 'Invalid login' || $error == 'Login failed'}
                                     <script> $(#loginModal).setAttribute('aria-hidden', false) </script>
                                     <div style="font-color = red"> Login failed! </div>
+                                    {/if}
                               {/foreach}
                               </div>
                               <h4>Forget your Password ?</h4>
