@@ -211,7 +211,7 @@
                 <li><a href="page_profile_me.php">Overview</a></li>
                 <li><a href="page_profile_history.html">History</a></li>
                 <li><a href="page_profile_settings.html">Settings</a></li>
-              </ul></li><?php  }?>
+              </ul></li>{elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'management.html'"> Management </a>
@@ -221,7 +221,6 @@
                 <li><a href="car_search.html">Search Vehicles</a></li>
                 <li><a href="user_search.html">Search Users</a></li>
               </ul></li>
-              {elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'administration.php'">
