@@ -98,7 +98,7 @@
         </script>
         {/if}
 
-        {if $logError}
+        {if $regError}
         <script>
         $( document ).ready(function() {
            $("#registrationModal").modal('toggle');
