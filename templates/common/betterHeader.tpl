@@ -114,7 +114,7 @@
                               <hr>
                                <div id="error_messages">
                               {foreach $ERROR_MESSAGES as $error}
-                                {if $error == 'Invalid login' || $error == 'Login failed'}
+                                {if $error == 'Invalid login' or $error == 'Login failed'}
                                     <script> $(#loginModal).attr('aria-hidden', false) </script>
                                     <div style="font-color = red"> Login failed! </div>
                                     {/if}
