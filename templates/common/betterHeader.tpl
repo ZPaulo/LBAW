@@ -9,6 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.html">
 
@@ -111,7 +112,14 @@
                               </div>
 
                               <hr>
-
+                               <div id="error_messages">
+                              {foreach $ERROR_MESSAGES as $error}
+                                {if}
+                                  {$error == 'Invalid login' || $error == 'Login failed'}
+                                    <script> $(#loginModal).setAttribute('aria-hidden', false) </script>
+                                    <div style="font-color = red"> Login failed! </div>
+                              {/foreach}
+                              </div>
                               <h4>Forget your Password ?</h4>
                               <p>no worries, <a class="color-green" href="#">click here</a> to reset your password.</p>
                           </form>            
@@ -247,11 +255,6 @@
       <!--/navbar-collapse-->
     </div>
     <!--=== End Header ===-->
-     <div id="error_messages">
-    {foreach $ERROR_MESSAGES as $error}
-      <div class="error">{$error}<a class="close" href="#">X</a></div>
-    {/foreach}
-    </div>
     <div id="success_messages">
     {foreach $SUCCESS_MESSAGES as $success}
       <div class="success">{$success}<a class="close" href="#">X</a></div>
