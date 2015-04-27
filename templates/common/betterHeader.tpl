@@ -69,9 +69,9 @@
               </ul></li>
             <li class="topbar-devider"></li>
             {if $USERNAME}
-              <li><a href="../../pages/page_login.php">{$USERNAME}</a></li>
+              <li><a href="../pages/page_login.php">{$USERNAME}</a></li>
               <li class="topbar-devider"></li>
-              <li> <a href="../../actions/users/logout.php">Logout</a></li>
+              <li> <a href="../actions/users/logout.php">Logout</a></li>
             {else}
               <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
               <li class="topbar-devider"></li>
