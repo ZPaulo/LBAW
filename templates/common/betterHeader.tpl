@@ -85,12 +85,23 @@
         {foreach $ERROR_MESSAGES as $error}
         {if $error == 'Invalid login' or $error == 'Login failed'}
         {$logError = true}
+        {elseif $error == 'Username already exists' or $error == 'Error creating user'}
+        {$regError = true}
         {/if}
+        [/if]
         {/foreach}
         {if $logError}
         <script>
         $( document ).ready(function() {
            $("#loginModal").modal('toggle');
+          });
+        </script>
+        {/if}
+
+        {if $logError}
+        <script>
+        $( document ).ready(function() {
+           $("#registrationModal").modal('toggle');
           });
         </script>
         {/if}
@@ -127,7 +138,7 @@
                               <hr>
                                <div id="error_messages">
                                 {if $logError}
-                                    <div> Login failed! </div>
+                                    <div style="font-color: red"> Login failed! </div>
                                 {/if}
                               </div>
                               <h4>Forget your Password ?</h4>
@@ -187,6 +198,11 @@
                                              I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
                                          </label>                        
                                      </div>
+                                     <div id="error_messages">
+                                {if $regError}
+                                    <div style="font-color: red"> {$error} </div>
+                                {/if}
+                              </div>
                                      <div class="col-lg-6 text-right">
                                          <button class="btn-u" type="submit">Register</button>                        
                                      </div>
