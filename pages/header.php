@@ -176,14 +176,15 @@
 								<li><a href="car_search.html">Search Vehicles</a></li>
 								<li><a href="user_search.html">Search Users</a></li>
 							</ul></li>
+						<?php if($_SESSION['type']=='admin'){?>
 						<li class="dropdown"><a href="javascript:void(0);"
 							class="dropdown-toggle" data-toggle="dropdown"
-							onclick="window.location = 'administration.html'">
+							onclick="window.location = 'administration.php'">
 								Administration </a>
 							<ul class="dropdown-menu">
-								<li><a href="create_manager.html">Create Manager</a></li>
-								<li><a href="search_manager.html">Search Managers</a></li>
-							</ul></li>
+								<li><a href="create_manager.php">Create Manager</a></li>
+								<li><a href="search_manager.php">Search Managers</a></li>
+							</ul></li><?php  }?>
 						<li><i class="search fa fa-search search-btn"></i>
 							<div class="search-open">
 								<div class="input-group animated fadeInDown">
