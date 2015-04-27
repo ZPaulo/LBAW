@@ -24,4 +24,12 @@
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch() == true;
   }
+  function isAdminCorrect($username, $password) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * 
+                            FROM pessoa,Administrador 
+                            WHERE pessoa.username = ? AND pessoa.pessoaID = Administrador.administradorID AND pessoa.hash = ?");
+    $stmt->execute(array($username, sha1($password)));
+    return $stmt->fetch() == true;
+  }
 ?>
