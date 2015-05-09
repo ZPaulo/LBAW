@@ -26,19 +26,19 @@
 						<div class="tab-content">
 							<!-- Success Forms -->
 							<div class="tab-pane fade in active" id="home-1">
-								<form action="{$BASE_URL}actions/local/create_local.php" class="sky-form">
+								<form action="{$BASE_URL}actions/local/create_local.php" class="sky-form" method="post">
 									<header>Insert Local Info</header>
 
 									<fieldset>
 										<section>
 											<label class="label">Local Name</label> <label
-												class="input state-success"> <input type="text">
+												class="input state-success"> <input name="name" type="text">
 											</label>
 											<div class="note note-success">This is a required field.</div>
 										</section>
 										<section>
 											<label class="label">Google Maps Link</label> <label
-												class="input state-success"> <input type="text">
+												class="input state-success"> <input name="map" type="text">
 											</label>
 											<div class="note note-success">This is a required field.</div>
 										</section>
