@@ -1,3 +1,4 @@
+{include file='common/betterHeader.tpl'}
 <!--=== Breadcrumbs ===-->
 		<div class="breadcrumbs">
 			<div class="container">
@@ -66,3 +67,4 @@
 				<!-- End Content -->
 			</div>
 		</div>
+	{include file='common/betterFooter.tpl'}
