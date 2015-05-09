@@ -26,13 +26,13 @@
   } catch (PDOException $e) {
   
     if (strpos($e->getMessage(), 'users_pkey') !== false) {
-      $_SESSION['error_messages'][] = 'Duplicate username';
+      $_SESSION['error_messages'][] = 'Username already exists';
       $_SESSION['field_errors']['username'] = 'Username already exists';
     }
     else $_SESSION['error_messages'][] = 'Error creating user';
 
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL" . 'pages/users/register.php');
+    header("Location: $BASE_URL");
     exit;
   }
   $_SESSION['success_messages'][] = 'User registered successfully';  
