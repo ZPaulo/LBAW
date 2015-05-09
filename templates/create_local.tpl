@@ -26,7 +26,7 @@
 						<div class="tab-content">
 							<!-- Success Forms -->
 							<div class="tab-pane fade in active" id="home-1">
-								<form action="{$BASE_URL}actions/local/create_local.php" class="sky-form" method="post">
+								<form action="{$BASE_URL}actions/local/create_local.php" class="sky-form" method="get">
 									<header>Insert Local Info</header>
 
 									<fieldset>
