@@ -15,6 +15,20 @@
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
     $stmt->execute(array($default,$id));
   }
+  function createManager($username, $password) {
+    global $conn;
+  
+    $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute(array('nada', $username, sha1($password), 'nada', 'nada', 'nada'));
+
+    $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
+    $stmt->execute(array($username));
+    $id = $stmt->fetch()["pessoaid"];
+
+   	//ISTO NAO DA PQ A DB TA MAL
+    $stmt = $conn->prepare("INSERT INTO gestor VALUES (?, ?)");
+    $stmt->execute(array($id,'0'));
+  }
 
   function isClientCorrect($username, $password) {
     global $conn;
@@ -31,5 +45,12 @@
                             WHERE pessoa.username = ? AND pessoa.pessoaID = Administrador.administradorID AND pessoa.hash = ?");
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch() == true;
+  }
+  
+  function searchManager($name) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT username FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaID = gestor.gestorID");
+  	$stmt->execute(array('%'.$name.'%'));
+  	return $stmt->fetch_all();
   }
 ?>

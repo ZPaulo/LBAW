@@ -12,10 +12,8 @@ if (isset($_SESSION['type']))
 <html lang="en">
 <!--<![endif]-->
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/portfolio_4_columns_grid_text.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:47 GMT -->
 <head>
-<title>Portfolio 4 Columns Grid Text | Unify - Responsive
-	Website Template</title>
+<title>Administration</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -172,6 +170,10 @@ if (isset($_SESSION['type']))
 					|
 					<div class="cbp-filter-item">
 						<a href="search_manager.php">Search Manager</a>
+					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="create_local.php">Create Local</a>
 					</div>
 				</div>
 			</div>

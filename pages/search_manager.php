@@ -5,9 +5,8 @@
 <html lang="en">
 <!--<![endif]-->
 
-<!-- Mirrored from htmlstream.com/preview/unify-v1.7/page_search_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Mar 2015 12:34:11 GMT -->
 <head>
-<title>Table Search | Unify - Responsive Website Template</title>
+<title>Search Managers</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -202,9 +201,15 @@
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+							include_once($BASE_DIR .'database/users.php'); 
+							$result = searchManager($_GET['name']);
+							$count = 0;
+							foreach ($result as $row) {
+							?>
 							<tr>
-								<td>1</td>
-								<td>Mark</td>
+								<td><?php echo $count;?></td>
+								<td><?php echo $row['username']?></td>
 								<td></td>
 								<td></td>
 								<td></td>
@@ -212,6 +217,7 @@
 										<i class="fa fa-trash-o"></i> Delete
 									</button></td>
 							</tr>
+							<?php }?>
 
 							<tr>
 								<td>2</td>
