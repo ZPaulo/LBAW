@@ -32,6 +32,10 @@
 <link rel="stylesheet"
   href="../plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
+	href="../plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+<link rel="stylesheet"
+	href="../plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+<link rel="stylesheet"
   href="../plugins/parallax-slider/css/parallax-slider.css">
 <link rel="stylesheet"
   href="../plugins/owl-carousel/owl-carousel/owl.carousel.css">
