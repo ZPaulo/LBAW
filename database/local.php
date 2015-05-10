@@ -1,6 +1,6 @@
 <?php
   function createLocal($name, $map) {
-  	echo 'merda';
+  	echo $name.$map;
     global $conn;
   
     $stmt = $conn->prepare("INSERT INTO localdestand VALUES (?, ?)");
