@@ -92,7 +92,6 @@
         {elseif $error == 'Username already exists' or $error == 'Error creating user'}
         {$regError = true}
         {/if}
-        [/if]
         {/foreach}
         {if $logError}
         <script>
