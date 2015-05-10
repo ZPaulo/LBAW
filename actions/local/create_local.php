@@ -12,10 +12,10 @@ try {
     $_SESSION['error_messages'][] = 'Error creating local';
 
     $_SESSION['form_values'] = $_POST;
-//     header("Location: www.google.com");
+    header("Location: $BASE_URL");
     exit;
 }
 
-// header ( 'Location: ' . $_SERVER ['HTTP_REFERER'] );
+header ( 'Location: ' . $_SERVER ['HTTP_REFERER'] );
 // header('Location: ' . $BASE_URL);
 ?>
