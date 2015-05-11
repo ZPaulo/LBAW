@@ -16,17 +16,25 @@
     $stmt->execute(array($default,$id));
   }
   function createManager($username, $password, $local) {
+  	echo $username.$password.$local.'\n';
     global $conn;
   
     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute(array('empty', $username, sha1($password), 'empty', 'empty', 'empty'));
-
+	
+    echo '1st works';
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
     $stmt->execute(array($username));
     $id = $stmt->fetch()["pessoaid"];
 
+
+    echo '2nd works';
+    
     $stmt = $conn->prepare("INSERT INTO gestor VALUES (?, ?)");
     $stmt->execute(array($id,$local));
+    
+
+    echo '3rd works';
   }
 
   function isClientCorrect($username, $password) {
