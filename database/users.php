@@ -18,7 +18,7 @@
   function createManager($username, $password, $local) {
 //   	echo $username.$password.$local.'\n';
 //     global $conn;
-
+		echo $local;
 //     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
 //     $stmt->execute(array('empty', $username, sha1($password), 'empty', '0', 'empty'));
 	
