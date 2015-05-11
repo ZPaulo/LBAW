@@ -12,6 +12,8 @@
   $username = strip_tags($_POST['username']);
   $password = $_POST['password'];
   $local = $_POST['local'];
+  
+  echo 'local: '.$local;
 
   //$photo = $_FILES['photo'];
   //$extension = end(explode(".", $photo["name"]));
