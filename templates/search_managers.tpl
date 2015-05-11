@@ -58,10 +58,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							
+							{foreach $managers as $manager}
 							<tr>
-								<td><?php echo $count;?></td>
-								<td><?php echo $row['username']?></td>
+								<td></td>
+								<td>{$manager.username}</td>
 								<td></td>
 								<td></td>
 								<td></td>
@@ -69,29 +69,7 @@
 										<i class="fa fa-trash-o"></i> Delete
 									</button></td>
 							</tr>
-
-							<tr>
-								<td>2</td>
-								<td>John</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><button class="btn btn-danger btn-xs">
-										<i class="fa fa-trash-o"></i> Delete
-									</button></td>
-							</tr>
-
-							<tr>
-								<td>3</td>
-								<td>Ted</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><button class="btn btn-danger btn-xs">
-										<i class="fa fa-trash-o"></i> Delete
-									</button></td>
-							</tr>
-
+              	           {/foreach}
 						</tbody>
 					</table>
 				</div>
