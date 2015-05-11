@@ -1,9 +1,9 @@
 <?php
   session_start();
   include_once('../config/init.php');
-  include_once($BASE_DIR .'database/local.php');
+  include_once($BASE_DIR .'database/users.php');
   
-  $locals = getAllmanagers($_GET);
+  $locals = searchManager($_GET['name']);
   
   $smarty->assign('managers', $managers);
   
