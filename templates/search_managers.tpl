@@ -58,9 +58,10 @@
 							</tr>
 						</thead>
 						<tbody>
+              	            {$count=0 }
 							{foreach $managers as $manager}
 							<tr>
-								<td></td>
+								<td>{$count}</td>
 								<td>{$manager.username}</td>
 								<td></td>
 								<td></td>
@@ -69,6 +70,7 @@
 										<i class="fa fa-trash-o"></i> Delete
 									</button></td>
 							</tr>
+							{$count=$count+1}
               	           {/foreach}
 						</tbody>
 					</table>
