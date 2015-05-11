@@ -20,7 +20,7 @@
     global $conn;
   
     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute(array('empty', $username, sha1($password), 'empty', 'empty', 'empty'));
+    $stmt->execute(array('empty', $username, sha1($password), 'empty', '0', 'empty'));
 	
     echo '1st works';
     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
