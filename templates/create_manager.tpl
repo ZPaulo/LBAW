@@ -48,13 +48,18 @@
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
-								<select>
-                                    <option value="0">Choose name</option>
-                                    <option value="1">Alexandra</option>
-                                    <option value="2">Alice</option>
-                                    <option value="3">Anastasia</option>
-                                    <option value="4">Avelina</option>
-                                </select>
+								<section>
+                        		    <label class="label">Select</label>
+                    		        <label class="select">
+                	                	<select>
+              	                      		<option value="-1">Choose local</option>
+              	                      		{foreach $locals as $local}
+              	                      			<option value="{$local.localdestandid}">{$local.nome}</option>
+              	                      		{/foreach}
+                                		</select>
+                                	<i></i>
+                            		</label>
+                        		</section>
 
 
 							</fieldset>

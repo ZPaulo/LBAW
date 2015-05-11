@@ -6,4 +6,12 @@
     $stmt->execute(array($name, $map));
 
   }
+  function getAlllocals() {
+
+  	global $conn;
+  	
+  	$stmt = $conn->prepare("SELECT * FROM localdestand");
+  	$stmt->execute();
+    return $stmt->fetchAll();
+  }
 ?>
