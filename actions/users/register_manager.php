@@ -29,7 +29,7 @@
     else $_SESSION['error_messages'][] = 'Error creating manager';
 
     $_SESSION['form_values'] = $_POST;
-//     header("Location: $BASE_URL" . 'pages/administration.php');
+    header("Location: $BASE_URL" . 'pages/administration.php');
     exit;
   }
   $_SESSION['success_messages'][] = 'Manager registered successfully';  

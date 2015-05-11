@@ -16,25 +16,20 @@
     $stmt->execute(array($default,$id));
   }
   function createManager($username, $password, $local) {
-//   	echo $username.$password.$local.'\n';
-//     global $conn;
-		echo $local;
-//     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
-//     $stmt->execute(array('empty', $username, sha1($password), 'empty', '0', 'empty'));
+    global $conn;
 	
-//     echo '1st works';
-//     $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
-//     $stmt->execute(array($username));
-//     $id = $stmt->fetch()["pessoaid"];
+    $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute(array('empty', $username, sha1($password), 'empty', '0', 'empty'));
+	
+    $stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
+    $stmt->execute(array($username));
+    $id = $stmt->fetch()["pessoaid"];
 
 
-//     echo '2nd works';
+    $stmt = $conn->prepare("INSERT INTO gestor VALUES (?, ?)");
+    $stmt->execute(array($id,$local));
     
-//     $stmt = $conn->prepare("INSERT INTO gestor VALUES (?, ?)");
-//     $stmt->execute(array($id,$local));
-    
 
-//     echo '3rd works';
   }
 
   function isClientCorrect($username, $password) {
