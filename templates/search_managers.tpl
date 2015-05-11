@@ -1,3 +1,4 @@
+{include file='common/betterHeader.tpl'}
 <!--=== Breadcrumbs ===-->
 		<div class="breadcrumbs breadcrumbs-dark">
 			<div class="container">
@@ -57,12 +58,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-							include_once($BASE_DIR .'database/users.php'); 
-							$result = searchManager($_GET['name']);
-							$count = 0;
-							foreach ($result as $row) {
-							?>
+							
 							<tr>
 								<td><?php echo $count;?></td>
 								<td><?php echo $row['username']?></td>
@@ -73,7 +69,6 @@
 										<i class="fa fa-trash-o"></i> Delete
 									</button></td>
 							</tr>
-							<?php }?>
 
 							<tr>
 								<td>2</td>
@@ -102,3 +97,4 @@
 				</div>
 			</div>
 		</div>
+	{include file='common/betterFooter.tpl'}
