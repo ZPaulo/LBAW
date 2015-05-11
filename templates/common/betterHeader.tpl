@@ -48,7 +48,7 @@
 
 <!-- CSS Page Style -->
 <link rel="stylesheet"
-	href="assets/css/pages/page_search_inner_tables.css">
+	href="../css/pages/page_search_inner_tables.css">
 
 <!-- CSS Theme -->
 <link rel="stylesheet" href="../css/theme-colors/default.css"
