@@ -26,32 +26,32 @@
 				<div class="tab-content">
 					<!-- Success Forms -->
 					<div class="tab-pane fade in active" id="home-1">
-						<form action="#" class="sky-form">
+						<form action="{$BASE_URL}actions/users/register_manager.php" method="post" class="sky-form">
 							<header>Insert Manager Info</header>
 
 							<fieldset>
 								<section>
 									<label class="label">Manager Name</label> <label
-										class="input state-success"> <input type="text">
+										class="input state-success"> <input name="name" type="text">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
 								<section>
 									<label class="label">Manager Password</label> <label
-										class="input state-success"> <input type="text">
+										class="input state-success"> <input type="text" name="pass">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
 								<section>
 									<label class="label">Confirm Password</label> <label
-										class="input state-success"> <input type="text">
+										class="input state-success"> <input type="text" name="passconf">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
 								<section>
                         		    <label class="label">Select</label>
                     		        <label class="select">
-                	                	<select>
+                	                	<select name = "local">
               	                      		<option value="-1">Choose local</option>
               	                      		{foreach $locals as $local}
               	                      			<option value="{$local.localdestandid}">{$local.nome}</option>

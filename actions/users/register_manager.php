@@ -2,15 +2,16 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');  
 
-  if (!$_POST['username']  || !$_POST['password']) {
+  if (!$_POST['username']  || !$_POST['password'] || !$_POST['local']) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL" . 'pages/users/register.php');
+    header("Location: $BASE_URL" . 'pages/create_manager.php');
     exit;
   }
 
   $username = strip_tags($_POST['username']);
   $password = $_POST['password'];
+  
 
   //$photo = $_FILES['photo'];
   //$extension = end(explode(".", $photo["name"]));
@@ -29,6 +30,6 @@
     header("Location: $BASE_URL" . 'pages/administration.php');
     exit;
   }
-  $_SESSION['success_messages'][] = 'User registered successfully';  
-  header("Location: $BASE_URL");
+  $_SESSION['success_messages'][] = 'Manager registered successfully';  
+  header("Location: ".$_SESSION['HTTP_REFERER']);
 ?>
