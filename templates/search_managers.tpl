@@ -58,7 +58,7 @@
 							</tr>
 						</thead>
 						<tbody>
-              	            {$count=0 }
+              	            {$count=1}
 							{foreach $managers as $manager}
 							<tr>
 								<td>{$count}</td>
@@ -66,9 +66,9 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td><button class="btn btn-danger btn-xs">
+								<td><a href="{$BASE_URL}actions/users/delete_manager.php?manager={$manager.gestorid}"><button class="btn btn-danger btn-xs">
 										<i class="fa fa-trash-o"></i> Delete
-									</button></td>
+									</button></a></td>
 							</tr>
 							{$count=$count+1}
               	           {/foreach}
