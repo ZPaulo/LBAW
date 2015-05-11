@@ -53,7 +53,7 @@
   	global $conn;
   	$stmt = $conn->prepare("SELECT username FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaID = gestor.gestorID");
   	$stmt->execute(array('%'.$name.'%'));
-  	return $stmt->fetch_all();
+  	return $stmt->fetchAll();
   }
   
 ?>
