@@ -32,19 +32,19 @@
 							<fieldset>
 								<section>
 									<label class="label">Manager Name</label> <label
-										class="input state-success"> <input name="name" type="text">
+										class="input state-success"> <input name="username" type="text">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
 								<section>
 									<label class="label">Manager Password</label> <label
-										class="input state-success"> <input type="text" name="pass">
+										class="input state-success"> <input type="text" name="password">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>
 								<section>
 									<label class="label">Confirm Password</label> <label
-										class="input state-success"> <input type="text" name="passconf">
+										class="input state-success"> <input type="text" name="passwordconf">
 									</label>
 									<div class="note note-success">This is a required field.</div>
 								</section>

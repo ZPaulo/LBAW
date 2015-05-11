@@ -31,6 +31,5 @@
     exit;
   }
   $_SESSION['success_messages'][] = 'Manager registered successfully';  
-  echo 'works';
 //   header("Location: ".$_SESSION['HTTP_REFERER']);
 ?>
