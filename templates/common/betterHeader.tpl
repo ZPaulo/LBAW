@@ -45,6 +45,11 @@
   href="../plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 <!--[if lt IE 9]><link rel="stylesheet" href="../plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
 
+
+<!-- CSS Page Style -->
+<link rel="stylesheet"
+	href="assets/css/pages/page_search_inner_tables.css">
+
 <!-- CSS Theme -->
 <link rel="stylesheet" href="../css/theme-colors/default.css"
   id="style_color">
