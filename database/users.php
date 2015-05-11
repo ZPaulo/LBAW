@@ -15,7 +15,7 @@
     $stmt = $conn->prepare("INSERT INTO cliente VALUES (?, ?)");
     $stmt->execute(array($default,$id));
   }
-  function createManager($username, $password, $local) {
+ function createManager($username, $password, $local) {
     global $conn;
 	
     $stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
@@ -31,6 +31,20 @@
     
 
   }
+  function deleteManager($id) {
+  	global $conn;
+  
+  	$stmt = $conn->prepare("DELETE FROM pessoa WHERE pessoaid = ?");
+  	$stmt->execute(array($id));
+  
+  
+  	$stmt = $conn->prepare("DELETE FROM gestor WHERE gestorid = ?");
+  	$stmt->execute(array($id));
+  
+  
+  }
+  
+  
 
   function isClientCorrect($username, $password) {
     global $conn;
