@@ -3,7 +3,7 @@
   include_once('../config/init.php');
   include_once($BASE_DIR .'database/users.php');
   
-  $locals = searchManager($_GET['name']);
+  $managers = searchManager($_GET['name']);
   
   $smarty->assign('managers', $managers);
   
