@@ -10,9 +10,9 @@ try {
 		$_SESSION ['error_messages'] [] = 'Error deleting manager';
 	
 	$_SESSION ['form_values'] = $_POST;
-	header ( "Location: $BASE_URL" . 'pages/administration.php' );
+	header ( "Location: $BASE_URL" . 'pages/search_manager.php' );
 	exit ();
 }
 $_SESSION ['success_messages'] [] = 'Manager deleted successfully';
-header ( "Location: $BASE_URL" . 'pages/administration.php' );
+header ( "Location: $BASE_URL" . 'pages/search_manager.php' );
 ?>
