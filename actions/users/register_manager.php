@@ -17,7 +17,7 @@
   //$extension = end(explode(".", $photo["name"]));
 
   try {
-    createManager($username, $password);
+    createManager($username, $password,$local);
       } catch (PDOException $e) {
   
     if (strpos($e->getMessage(), 'users_pkey') !== false) {
