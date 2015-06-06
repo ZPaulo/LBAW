@@ -8,6 +8,7 @@
   $smarty->assign('user', $user);
   
   $newsletter = getnews($user["pessoaid"]);
+  
 
   $smarty->assign('news',$newsletter["newsletter"]);
   

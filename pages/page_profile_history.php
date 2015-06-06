@@ -1,15 +1,25 @@
 <?php
-  session_start();
-  include_once('../config/init.php');
-  include_once($BASE_DIR .'database/users.php');
-  
-  $user = getUser($_SESSION ['username']);
+session_start ();
+include_once ('../config/init.php');
+include_once ($BASE_DIR . 'database/users.php');
+include_once ($BASE_DIR . 'database/vehicle.php');
+include_once ($BASE_DIR . 'database/local.php');
 
-  $smarty->assign('user', $user);
-  
-  $newsletter = getnews($user["pessoaid"]);
+$user = getUser ( $_SESSION ['username'] );
 
-  $smarty->assign('news',$newsletter["newsletter"]);
-  
-  $smarty->display('user_settings.tpl');
+
+
+$reservations =getReservations($user["pessoaid"]);
+
+foreach ( $reservations as $key=>$r ) {
+	$r ["vehicleName"] = getVehicleName ( $r ["veiculoid"] );
+	$r ["extras"] = getExtrasFromReservation ( $r ["reservaid"] );
+	$r ["pickup"] = getLocalName ( $r ["localdestandlevantamentoid"] );
+	$r ["drop"] = getLocalName ( $r ["localdestandentregaid"] );
+	$reservations[$key]=$r;
+}
+
+$smarty->assign('reservations',$reservations);
+
+$smarty->display('user_history.tpl');
 ?>

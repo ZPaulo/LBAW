@@ -14,4 +14,12 @@
   	$stmt->execute();
     return $stmt->fetchAll();
   }
+  function getLocalName($id) {
+
+  	global $conn;
+  	
+  	$stmt = $conn->prepare("SELECT nome FROM localdestand WHERE localdestandid = ?");
+  	$stmt->execute(array(intval($id)));
+    return $stmt->fetch()["nome"];
+  }
 ?>

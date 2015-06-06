@@ -84,5 +84,12 @@
   	$stmt->execute(array(intval($id)));
   	return $stmt->fetch();
   }
+
+  function getReservations($id) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT * FROM reserva WHERE clienteid = ? ");
+  	$stmt->execute(array(intval($id)));
+  	return $stmt->fetchall();
+  }
   
 ?>
