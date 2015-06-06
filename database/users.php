@@ -45,6 +45,7 @@
   }
   
   
+  
 
   function isClientCorrect($username, $password) {
     global $conn;
@@ -68,6 +69,20 @@
   	$stmt = $conn->prepare("SELECT username,gestor.gestorid FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaID = gestor.gestorID");
   	$stmt->execute(array('%'.$name.'%'));
   	return $stmt->fetchAll();
+  }
+
+  function getUser($username) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT * FROM pessoa WHERE pessoa.username = ? ");
+  	$stmt->execute(array($username));
+  	return $stmt->fetch();
+  }
+
+  function getnews($id) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT newsletter FROM cliente WHERE clienteid = ? ");
+  	$stmt->execute(array(intval($id)));
+  	return $stmt->fetch();
   }
   
 ?>

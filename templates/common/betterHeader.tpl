@@ -40,6 +40,8 @@
 <link rel="stylesheet"
   href="../plugins/owl-carousel/owl-carousel/owl.carousel.css">
 <link rel="stylesheet"
+	href="../plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet"
   href="../plugins/sky-forms-pro/skyforms/css/sky-forms.css">
 <link rel="stylesheet"
   href="../plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
@@ -47,6 +49,8 @@
 
 
 <!-- CSS Page Style -->
+<link rel="stylesheet" href="../css/pages/profile.css">
+<link rel="stylesheet" href="../css/pages/shortcode_timeline2.css">
 <link rel="stylesheet"
 	href="../css/pages/page_search_inner_tables.css">
 

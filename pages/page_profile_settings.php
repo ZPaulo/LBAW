@@ -7,6 +7,9 @@
 
   $smarty->assign('user', $user);
   
+  $newsletter = getnews($user["pessoaid"]);
 
-  $smarty->display('user_profile.tpl');
+  $smarty->assign('news',$newsletter["newsletter"]);
+  
+  $smarty->display('user_settings.tpl');
 ?>
