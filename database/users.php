@@ -49,6 +49,13 @@
   	$stmt->execute(array(sha1($password),$_SESSION ['username']));
   
   }
+  function changeData($name,$email,$phone,$address) {
+  	global $conn;
+  
+  	$stmt = $conn->prepare("UPDATE pessoa SET nome = ?, email = ?, ntelemovel = ?, morada = ?  WHERE username = ?");
+  	$stmt->execute(array($name,$email,$phone,$address,$_SESSION ['username']));
+  
+  }
   
   
   

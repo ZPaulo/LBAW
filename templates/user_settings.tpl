@@ -43,50 +43,43 @@
 									<p>Below are the name and email addresses on file for your
 										account.</p>
 									<br>
-									<dl class="dl-horizontal">
-										<dt>
+									<form class="sky-form" id="sky-form" action="../actions/users/change_user_data.php" method="POST">
+										<!--Checkout-Form-->
+										<section><dt>
 											<strong>Your name </strong>
 										</dt>
-										<dd>
-											{$user.nome} <span> <a class="pull-right" href="#">
-													<i class="fa fa-pencil"></i>
-											</a>
-											</span>
-										</dd>
-										<hr>
-										<dt>
-											<strong>Primary Email Address </strong>
+											<label class="input"> <input name="name"
+												value="{$user.nome}">
+											</label>
+											
+									<br>
+											<dt>
+											<strong>Your email </strong>
 										</dt>
-										<dd>
-											{$user.email} <span> <a class="pull-right"
-												href="#"> <i class="fa fa-pencil"></i>
-											</a>
-											</span>
-										</dd>
-										<hr>
-										<dt>
-											<strong>Phone Number </strong>
+											<label class="input"> <input name="email"
+												value="{$user.email}">
+											</label>		
+									<br>
+											<dt>
+											<strong>Your phone number </strong>
 										</dt>
-										<dd>
-											{$user.ntelemovel} <span> <a class="pull-right"
-												href="#"> <i class="fa fa-pencil"></i>
-											</a>
-											</span>
-										</dd>
-										<hr>
-										<dt>
-											<strong>Address </strong>
+											<label class="input"> <input name="phone"
+												value="{$user.ntelemovel}">
+											</label>		
+									<br>
+											<dt>
+											<strong>Your address </strong>
 										</dt>
-										<dd>
-											{$user.morada} <span> <a class="pull-right" href="#">
-													<i class="fa fa-pencil"></i>
-											</a>
-											</span>
-										</dd>
-										<hr>
-									</dl>
-									<button type="button" class="btn-u">Save Changes</button>
-									<button type="button" class="btn-u btn-u-red">Eliminate Account</button>
+											<label class="input"> <input name="address"
+												value="{$user.morada}">
+											</label>
+										</section>
+
+										
+										<!--End Checkout-Form--><button class="btn-u" type="submit">Save Changes</button>
+										<button type="button" class="btn-u btn-u-red">Eliminate Account</button>
+									</form>
+									
 								</div>
 
 								<div id="passwordTab" class="profile-edit tab-pane fade">
