@@ -40,9 +40,16 @@
   
   	$stmt = $conn->prepare("DELETE FROM gestor WHERE gestorid = ?");
   	$stmt->execute(array($id));
+  }
+
+  function changePassword($password) {
+  	global $conn;
   
+  	$stmt = $conn->prepare("UPDATE pessoa SET hash = ? WHERE username = ?");
+  	$stmt->execute(array(sha1($password),$_SESSION ['username']));
   
   }
+  
   
   
   

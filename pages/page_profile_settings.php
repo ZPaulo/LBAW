@@ -5,6 +5,7 @@
   
   $user = getUser($_SESSION ['username']);
 
+  
   $smarty->assign('user', $user);
   
   $newsletter = getnews($user["pessoaid"]);

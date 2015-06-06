@@ -85,7 +85,6 @@
 										</dd>
 										<hr>
 									</dl>
-									<button type="button" class="btn-u btn-u-default">Cancel</button>
 									<button type="button" class="btn-u">Save Changes</button>
 									<button type="button" class="btn-u btn-u-red">Eliminate Account</button>
 								</div>
@@ -94,19 +93,18 @@
 									<h2 class="heading-md">Manage your Security Settings</h2>
 									<p>Change your password.</p>
 									<br>
-									<form class="sky-form" id="sky-form" action="#">
+									<form class="sky-form" id="sky-form" action="../actions/users/change_password.php" method="POST">
 										<!--Checkout-Form-->
 										<section>
-											<label class="input"> <input type="password" name="name"
+											<label class="input"> <input type="password" name="password"
 												placeholder="password">
 											</label>
-											<label class="input"> <input type="password" name="name"
+											<label class="input"> <input type="password" name="confirmpassword"
 												placeholder="confirm password">
 											</label>
 										</section>
 
 										
-										<button type="button" class="btn-u btn-u-default">Cancel</button>
 										<button class="btn-u" type="submit">Save Changes</button>
 										<!--End Checkout-Form-->
 									</form>
@@ -174,7 +172,6 @@
 												</label>
 											</section>
 										</div>
-										<button type="button" class="btn-u btn-u-default">Cancel</button>
 										<button class="btn-u" type="submit">Save Changes</button>
 										<!--End Checkout-Form-->
 									</form>
