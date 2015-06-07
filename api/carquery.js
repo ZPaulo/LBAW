@@ -39,7 +39,7 @@ function getModelsByManufacturer(manufacturer, cyear)
 
     $.getJSON(carquery.base_url+"?callback=?", {cmd:"getModels", make: carManufacturer, year: carYear}, function(data) {
 
-    var makes = data.Makes;
+    var makes = data.Models;
     for (var i = 0; i < makes.length; i++)
     {
         alert(makes[i].make_display); //array com as specs do carro, os mais imp são
@@ -66,16 +66,14 @@ function getModelsByManufacturer(manufacturer)
     var carquery = new CarQuery();
 
     carquery.init();
-    
-        $.getJSON(carquery.base_url+"?callback=?", {cmd:"getModels", make: carManufacturer}, function(data) {
+        $.getJSON(carquery.base_url+"?callback=?", {cmd:"getModels", make: "ford"}, function(data) {
 
-        var makes = data.Makes;
+        var makes = data.Models;
         for (var i = 0; i < makes.length; i++)
         {
-            alert(makes[i].make_display);
+            alert(makes[i].model_name);
         } 
     });
-    carquery.init();
 }
 
 function getCarsByKeyword(search)
@@ -87,11 +85,11 @@ function getCarsByKeyword(search)
      
     $.getJSON(carquery.base_url+"?callback=?", {cmd:"getTrims", keyword: carSearch}, function(data) {
 
-        var makes = data.Makes;
+        var makes = data.Trims;
         for (var i = 0; i < makes.length; i++)
         {
                         
-            alert(makes[i].make_display); //array com as specs do carro, os mais imp são
+            alert(makes[i].year); //array com as specs do carro, os mais imp são
             /*
             "make_display":"Dodge",
             "model_name":"Viper SRT10",
@@ -120,7 +118,7 @@ function getCarsByParams(seats, manufacturer, body)
      
     $.getJSON(carquery.base_url+"?callback=?", {cmd:"getTrims", seats: carSeats, make: carManufacturer, body: carBody}, function(data) {
 
-        var makes = data.Makes;
+        var makes = data.Model;
         for (var i = 0; i < makes.length; i++)
         {
             alert(makes[i].make_display); //array com as marcas dos carros
