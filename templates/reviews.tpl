@@ -39,7 +39,14 @@
                                 <ul class="list-inline share-list">
                                     <li>
                                 {if $USERNAME === $r.cliente.username}<a href="../actions/reviews/delete_review.php?id={$r.reviewid}"><button class="btn-u btn-u-red btn-large">Delete Review</button></a>{/if}
-                                <a href="../actions/reviews/up_review.php?id={$r.reviewid}"><i class="fa fa-arrow-up"></i></a><a href="../actions/reviews/down_review.php?id={$r.reviewid}"><i class="fa fa-arrow-down"></i></a>Rating: {$r.rating}  </li>
+                                {if $voted[$r.reviewid]===1}
+                               	</a><a href="../actions/reviews/down_review.php?id={$r.reviewid}"><i class="fa fa-arrow-down"></i>
+                                {elseif $voted[$r.reviewid]===-1}<a href="../actions/reviews/up_review.php?id={$r.reviewid}"><i class="fa fa-arrow-up"></i>
+                                {else}
+                                <a href="../actions/reviews/up_review.php?id={$r.reviewid}"><i class="fa fa-arrow-up"></i>
+                                </a><a href="../actions/reviews/down_review.php?id={$r.reviewid}"><i class="fa fa-arrow-down"></i>
+                                {/if}
+                                </a>Rating: {$r.rating}  </li>
                                 </ul>
                             </div>
                         </div>
