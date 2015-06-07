@@ -127,6 +127,7 @@
 			<script type="text/javascript"
 				src="../javascript/plugins/parallax-slider.js"></script>
 			<script type="text/javascript" src="../javascript/plugins/datepicker.js"></script>
+			
 			<script type="text/javascript">
 				jQuery(document).ready(function() {
 					App.init();

@@ -21,6 +21,7 @@
 <link rel="stylesheet"
   href="../plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shop.style.css">
 
 <!-- CSS Header and Footer -->
 <link rel="stylesheet" href="../css/headers/header-default.css">
@@ -55,8 +56,7 @@
 	href="../css/pages/page_search_inner_tables.css">
 
 <!-- CSS Theme -->
-<link rel="stylesheet" href="../css/theme-colors/default.css"
-  id="style_color">
+<link rel="stylesheet" href="../css/theme-colors/default.css" id="style_color">
 <link rel="stylesheet" href="../css/theme-skins/dark.css">
 
 <!-- CSS Customization -->

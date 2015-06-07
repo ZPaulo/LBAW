@@ -11,7 +11,7 @@
 		<!--=== End Slider ===-->
 		<div class="col-md-6">
 			<!-- Reg-Form -->
-			<form action="#" id="sky-form4" class="sky-form">
+			<form action="cars_search.php" id="sky-form4" class="sky-form">
 				<header>Rent now</header>
 
 				<fieldset>
