@@ -90,10 +90,10 @@
 										<!--Checkout-Form-->
 										<section>
 											<label class="input"> <input type="password" name="password"
-												placeholder="password">
+												placeholder="Password">
 											</label>
 											<label class="input"> <input type="password" name="confirmpassword"
-												placeholder="confirm password">
+												placeholder="Confirm password">
 											</label>
 										</section>
 

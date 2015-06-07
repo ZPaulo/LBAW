@@ -56,6 +56,7 @@
 										<button type="button" class="btn-u">Validate Delivery</button>
 										<button type="button" class="btn-u btn-u-red">Cancel
 											Reservation</button>
+										<a href="page_invoice.php" class="btn-u">View bill</a>
 									</div>
 								</div></li>
 						{/foreach}
