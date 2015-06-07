@@ -14,7 +14,7 @@
 			<form action="cars_search.php" id="sky-form4" class="sky-form">
 				<header>Rent now</header>
 
-				<fieldset>
+				<fieldset id="fs">
 					<section>
 						<label class="input"> <i
 							class="icon-append glyphicon glyphicon-globe"></i> <input
@@ -58,4 +58,16 @@
 			</form>
 			<!-- End Reg-Form -->
 		</div>
+		<script type="text/javascript">
+				jQuery(document).ready(function() {
+					if($('#return').is(':checked')) {
+						$('#fs').append('<label class="input"> <i
+							class="icon-append glyphicon glyphicon-globe"></i> <input
+							type="Location" name="Location" placeholder="Location"> <b
+							class="tooltip tooltip-bottom-right">Enter postal code or
+								city location</b>
+						</label>')
+					}
+				});
+			</script>
 	{include file='common/betterFooter.tpl'}
