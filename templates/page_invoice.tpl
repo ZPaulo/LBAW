@@ -1,4 +1,15 @@
 {include file='common/betterHeader.tpl'}
+{literal}
+ <script>
+    $( document ).ready(function() {
+        $("#print").click(function() {
+            $('#breadcrumbs').hide();
+            $('#footer-v1').hide();
+            $('#header').hide();
+        });
+    });
+</script>
+{/literal}
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
     	<div class="container">
@@ -13,7 +24,7 @@
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    <div class="container content">
+    <div id="printC" class="container content">
         <!--Invoice Header-->
         <div class="row invoice-header">
             <div class="col-xs-6">
@@ -141,7 +152,7 @@
                     <li><strong>VAT ($6):</strong> $8371</li>
                     <li><strong>Grand Total:</strong> $101486</li>
                 </ul>
-                <button class="btn-u sm-margin-bottom-10" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print</button>            
+                <button id="print"class="btn-u sm-margin-bottom-10" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print</button>            
                 <button class="btn-u">Submit The Invoice</button>            
             </div>
         </div>

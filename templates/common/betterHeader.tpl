@@ -10,6 +10,8 @@
 <meta name="author" content="">
 
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+<script src="../api/carquery.js"></script>
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.html">
 
@@ -21,7 +23,6 @@
 <link rel="stylesheet"
   href="../plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/shop.style.css">
 
 <!-- CSS Header and Footer -->
 <link rel="stylesheet" href="../css/headers/header-default.css">
@@ -44,6 +45,8 @@
 	href="../plugins/scrollbar/css/jquery.mCustomScrollbar.css">
 <link rel="stylesheet"
   href="../plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+<link rel="stylesheet" href="../css/shop.style.css">
+<link rel="stylesheet" href="../css/pages/page_invoice.css">
 <link rel="stylesheet"
   href="../plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 <!--[if lt IE 9]><link rel="stylesheet" href="../plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
@@ -56,7 +59,8 @@
 	href="../css/pages/page_search_inner_tables.css">
 
 <!-- CSS Theme -->
-<link rel="stylesheet" href="../css/theme-colors/default.css" id="style_color">
+<link rel="stylesheet" href="../css/theme-colors/default.css"
+  id="style_color">
 <link rel="stylesheet" href="../css/theme-skins/dark.css">
 
 <!-- CSS Customization -->
@@ -117,7 +121,13 @@
           });
         </script>
         {/if}
-       
+        <script>
+        $( document ).ready(function() {
+        //getCarsByKeyword('Seat');
+         //getModelsByManufacturer('ford');
+         //getCarsByYear(2009);
+          });
+        </script>
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -226,7 +236,7 @@
             </div>
           </div>
         </div>
-
+        <div id="cq-search-results"></div>
         <!-- Toggle get grouped for better mobile display -->
         <button type="button" class="navbar-toggle" data-toggle="collapse"
           data-target=".navbar-responsive-collapse">
@@ -247,8 +257,6 @@
               data-toggle=""> Home </a></li>
             <li class=""><a href="car_search.html" class=""
               data-toggle=""> Fleet </a></li>
-            <li class=""><a href="reviews.php" class=""
-              data-toggle=""> Reviews </a></li>
             <!-- End Home -->
 
             <!-- Pages -->
@@ -259,8 +267,7 @@
                 <li><a href="page_profile_me.php">Overview</a></li>
                 <li><a href="page_profile_history.php">History</a></li>
                 <li><a href="page_profile_settings.php">Settings</a></li>
-              </ul></li>
-              {elseif $TYPE == 'manager'}
+              </ul></li>{elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'management.html'"> Management </a>
@@ -270,7 +277,6 @@
                 <li><a href="car_search.html">Search Vehicles</a></li>
                 <li><a href="user_search.html">Search Users</a></li>
               </ul></li>
-              {elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'administration.php'">
@@ -285,7 +291,7 @@
                 <div class="input-group animated fadeInDown">
                   <input type="text" class="form-control" placeholder="Search">
                   <span class="input-group-btn">
-                    <button class="btn-u" type="button">Go</button>
+                    <button id="go" class="btn-u" type="button">Go</button>
                   </span>
                 </div>
               </div></li>
