@@ -89,6 +89,26 @@
   	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
   }
   
+ function enableNews(){
+  	global $conn;
+  	
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  	
+  	$stmt = $conn->prepare("UPDATE cliente SET newsletter = TRUE WHERE clienteid = ?");
+  	$stmt->execute(array($id));
+  }
+  function disableNews(){
+  	global $conn;
+  	 
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  	 
+  	$stmt = $conn->prepare("UPDATE cliente SET newsletter = FALSE WHERE clienteid = ?");
+  	$stmt->execute(array($id));
+  }
   
 
   function getmastercard()  {

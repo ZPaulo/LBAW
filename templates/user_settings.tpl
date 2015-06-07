@@ -122,7 +122,7 @@
 										<h6>Card number: {$m["ncartao"]}</h6>
 										<h6>Name on card: {$m["nome"]}</h6>
 										<h6>CVV: {$m["cvv"]}</h6>
-										<h6>Expiration Date: {$m["mes"]}/{$m["ano"]}</h6><a href="#"><button type="button" class="btn-u btn-u-red">Eliminate Option</button></a>
+										<h6>Expiration Date: {$m["mes"]}/{$m["ano"]}</h6><a href="../actions/users/delete_visa.php?id={$m.visaid}"><button type="button" class="btn-u btn-u-red">Eliminate Option</button></a>
 									<br>
 									{/foreach}
 									<br>
@@ -174,10 +174,10 @@
 									<h2 class="heading-md">Manage your Notifications.</h2>
 									<p>Below are the notifications you may manage.</p>
 									<br>
-									<form class="sky-form" id="sky-form3" action="#">
+									<form class="sky-form" id="sky-form3" action="../actions/users/change_news.php">
 										
 										<label class="toggle"><input type="checkbox"
-											{if $news}checked="" {/if} name="checkbox-toggle-1"><i></i>Receive
+											{if $news}checked="" {/if} name="news"><i></i>Receive
 											our monthly newsletter</label>
 										<br>
 										<button type="button" class="btn-u btn-u-default">Reset</button>
