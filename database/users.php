@@ -185,6 +185,13 @@ function deletemastercard($id){
   	return $stmt->fetch();
   }
 
+  function getUserfromId($id) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT * FROM pessoa WHERE pessoa.pessoaid = ? ");
+  	$stmt->execute(array($id));
+  	return $stmt->fetch();
+  }
+  
   function getnews($id) {
   	global $conn;
   	$stmt = $conn->prepare("SELECT newsletter FROM cliente WHERE clienteid = ? ");

@@ -247,6 +247,8 @@
               data-toggle=""> Home </a></li>
             <li class=""><a href="car_search.html" class=""
               data-toggle=""> Fleet </a></li>
+            <li class=""><a href="reviews.php" class=""
+              data-toggle=""> Reviews </a></li>
             <!-- End Home -->
 
             <!-- Pages -->
@@ -257,7 +259,8 @@
                 <li><a href="page_profile_me.php">Overview</a></li>
                 <li><a href="page_profile_history.php">History</a></li>
                 <li><a href="page_profile_settings.php">Settings</a></li>
-              </ul></li>{elseif $TYPE == 'admin'}
+              </ul></li>
+              {elseif $TYPE == 'manager'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'management.html'"> Management </a>
@@ -267,6 +270,7 @@
                 <li><a href="car_search.html">Search Vehicles</a></li>
                 <li><a href="user_search.html">Search Users</a></li>
               </ul></li>
+              {elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'administration.php'">
