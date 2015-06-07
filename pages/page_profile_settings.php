@@ -12,6 +12,16 @@
   
 
   $smarty->assign('news',$newsletter["newsletter"]);
+
+  $mastercard = getmastercard();
   
+  $smarty->assign('mastercard',$mastercard);
+  
+  $visa = getvisa();
+  
+  $smarty->assign('visa',$visa);
+  
+//   echo $mastercard[0]["ncartao"];
+//   var_dump($mastercard);
   $smarty->display('user_settings.tpl');
 ?>

@@ -106,17 +106,37 @@
 								<div id="payment" class="profile-edit tab-pane fade">
 									<h2 class="heading-md">Manage your Payment Settings</h2>
 									<p>Below are the payment options for your account.</p>
+									
+									{foreach from=$mastercard item=m}
+									<h2></h2>
+										<h4>Mastercard option</h4>
+										<h6>Card number: {$m["ncartao"]}</h6>
+										<h6>Name on card: {$m["nome"]}</h6>
+										<h6>CVV: {$m["cvv"]}</h6>
+										<h6>Expiration Date: {$m["mes"]}/{$m["ano"]}</h6><a href="../actions/users/delete_mastercard.php?id={$m.mastercardid}"><button type="button" class="btn-u btn-u-red">Eliminate Option</button></a>
 									<br>
-									<form class="sky-form" id="sky-form" action="#">
+									{/foreach}
+									{foreach from=$visa item=m}
+									<h2></h2>
+										<h4>Visa option</h4>
+										<h6>Card number: {$m["ncartao"]}</h6>
+										<h6>Name on card: {$m["nome"]}</h6>
+										<h6>CVV: {$m["cvv"]}</h6>
+										<h6>Expiration Date: {$m["mes"]}/{$m["ano"]}</h6><a href="#"><button type="button" class="btn-u btn-u-red">Eliminate Option</button></a>
+									<br>
+									{/foreach}
+									<br>
+									<h2 class="heading-md">Create payment option</h2>
+									<form class="sky-form" id="sky-form" action="../actions/users/create_payment_option.php" method="POST">
 										<!--Checkout-Form-->
 										<section>
 											<div class="inline-group">
 												<label class="radio"><input type="radio" checked=""
-													name="radio-inline"><i class="rounded-x"></i>Visa</label> <label
-													class="radio"><input type="radio"
-													name="radio-inline"><i class="rounded-x"></i>MasterCard</label>
+													name="option" value="visa"><i class="rounded-x"></i>Visa</label>
 												<label class="radio"><input type="radio"
-													name="radio-inline"><i class="rounded-x"></i>PayPal</label>
+													name="option" value="mastercard"><i class="rounded-x"></i>MasterCard</label>
+												<label class="radio"><input type="radio"
+													name="option" value="paypal"><i class="rounded-x"></i>PayPal</label>
 											</div>
 										</section>
 
@@ -138,34 +158,14 @@
 												</label>
 											</section>
 										</div>
-
 										<div class="row">
 											<label class="label col col-4">Expiration date</label>
-											<section class="col col-5">
-												<label class="select"> <select name="month">
-														<option disabled="" selected="" value="0">Month</option>
-														<option value="1">January</option>
-														<option value="1">February</option>
-														<option value="3">March</option>
-														<option value="4">April</option>
-														<option value="5">May</option>
-														<option value="6">June</option>
-														<option value="7">July</option>
-														<option value="8">August</option>
-														<option value="9">September</option>
-														<option value="10">October</option>
-														<option value="11">November</option>
-														<option value="12">December</option>
-												</select> <i></i>
+											
+											<input type="month" name="month" id="month" placeholder=""> <i></i>
 												</label>
-											</section>
-											<section class="col col-3">
-												<label class="input"> <input type="text"
-													placeholder="Year" id="year" name="year">
-												</label>
-											</section>
+											
 										</div>
-										<button class="btn-u" type="submit">Save Changes</button>
+										<button class="btn-u" type="submit">Add option</button>
 										<!--End Checkout-Form-->
 									</form>
 								</div>

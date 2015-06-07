@@ -56,11 +56,84 @@
   	$stmt->execute(array($name,$email,$phone,$address,$_SESSION ['username']));
   
   }
+
+  function addvisa ( $name, $card, $cvv, $year, $month ){
+  	global $conn;
+  
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  
+  	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
+  	$stmt->execute(array($id));
   
   
+  
+  	$stmt = $conn->prepare("INSERT INTO visa VALUES (?,?,?,?,?,?)");
+  	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
+  }
+
+  function addmastercard ( $name, $card, $cvv, $year, $month ){
+  	global $conn;
+  
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  
+  	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
+  	$stmt->execute(array($id));
+  
+  
+  
+  	$stmt = $conn->prepare("INSERT INTO mastercard VALUES (?,?,?,?,?,?)");
+  	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
+  }
   
   
 
+  function getmastercard()  {
+  	global $conn;
+  	 
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  	 
+  	$stmt = $conn->prepare("SELECT * FROM mastercard,opcoesdepagamento WHERE opcoesdepagamento.clienteid = ? AND opcoesdepagamento.opcoesdepagamentoid = mastercard.mastercardid ");
+  	$stmt->execute(array($id));
+  	 
+  	return $stmt->fetchall();
+  }
+  
+function deletemastercard($id){
+  	global $conn;
+
+  	$stmt = $conn->prepare("DELETE FROM mastercard WHERE mastercardid = ? ");
+  	$stmt->execute(array($id));
+  	$stmt = $conn->prepare("DELETE FROM opcoespagamento WHERE opcoespagamentoid = ? ");
+  	$stmt->execute(array($id));
+  }
+  function deletevisa($id){
+  	global $conn;
+
+  	$stmt = $conn->prepare("DELETE FROM visa WHERE visaid = ? ");
+  	$stmt->execute(array($id));
+  	$stmt = $conn->prepare("DELETE FROM opcoespagamento WHERE opcoespagamentoid = ? ");
+  	$stmt->execute(array($id));
+  }
+
+  function getvisa()  {
+  	global $conn;
+  	 
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
+  	$stmt->execute(array($_SESSION['username']));
+  	$id = $stmt->fetch()['pessoaid'];
+  	 
+  	$stmt = $conn->prepare("SELECT * FROM visa,opcoesdepagamento WHERE opcoesdepagamento.clienteid = ? AND opcoesdepagamento.opcoesdepagamentoid = visa.visaid ");
+  	$stmt->execute(array($id));
+  	 
+  	return $stmt->fetchall();
+  }
+  
   function isClientCorrect($username, $password) {
     global $conn;
     $stmt = $conn->prepare("SELECT * 
