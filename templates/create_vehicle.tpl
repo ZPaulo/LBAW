@@ -24,16 +24,16 @@ $(document).ready(function(){
 				<div class="tab-content">
 					<!-- Success Forms -->
 					<div class="tab-pane fade in active" id="home-1">
-						<form action="{$BASE_URL}actions/users/register_admin.php"
+						<form action="{$BASE_URL}actions/vehicles/create_vehicle.php"
 							method="get" class="sky-form">
 							<header>Insert Vehicle Info</header>
 
 							<fieldset>
 								<section>
-									<label class=select> <select name="car-years" id="car-years"></select><i></i></label>
-									<label class=select> <select name="car-makes" id="car-makes"></select>
-										<i></i> </label><label class=select> <select name="car-models"
-											id="car-models"></select><i></i></label> <label class=select>
+									<label class="select"> <select name="car-years" id="car-years"></select><i></i></label>
+									<label class="select"> <select name="car-makes" id="car-makes"></select>
+										<i></i> </label><label class="select"> <select name="car-models"
+											id="car-models"></select><i></i></label> <label class="select">
 											<select name="car-model-trims" id="car-model-trims"></select><i></i>
 									</label>
 								
