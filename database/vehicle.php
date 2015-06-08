@@ -1,4 +1,9 @@
 <?php
+    
+  function createVehicle() {
+    
+  }
+
   function getVehicleName($id){
 
   	global $conn;
