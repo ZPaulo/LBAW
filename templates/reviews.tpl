@@ -5,7 +5,8 @@
             <!--Left Sidebar-->
             <div class="col-md-3 md-margin-bottom-40">
                 
-				<a href="create_review.php"><button class="btn-u btn-block">Create Review</button></a>
+				
+			  {if $TYPE == 'client'}<a href="create_review.php"><button class="btn-u btn-block">Create Review</button></a>{/if}
                 <!--End Datepicker-->
             </div>
             <!--End Left Sidebar-->
@@ -38,7 +39,8 @@
                                 <hr>
                                 <ul class="list-inline share-list">
                                     <li>
-                                {if $USERNAME === $r.cliente.username}<a href="../actions/reviews/delete_review.php?id={$r.reviewid}"><button class="btn-u btn-u-red btn-large">Delete Review</button></a>{/if}
+                                {if $TYPE == 'client'}
+								{if $USERNAME === $r.cliente.username}<a href="../actions/reviews/delete_review.php?id={$r.reviewid}"><button class="btn-u btn-u-red btn-large">Delete Review</button></a>{/if}
                                 {if $voted[$r.reviewid]===1}
                                	</a><a href="../actions/reviews/down_review.php?id={$r.reviewid}"><i class="fa fa-arrow-down"></i>
                                 {elseif $voted[$r.reviewid]===-1}<a href="../actions/reviews/up_review.php?id={$r.reviewid}"><i class="fa fa-arrow-up"></i>
@@ -46,6 +48,8 @@
                                 <a href="../actions/reviews/up_review.php?id={$r.reviewid}"><i class="fa fa-arrow-up"></i>
                                 </a><a href="../actions/reviews/down_review.php?id={$r.reviewid}"><i class="fa fa-arrow-down"></i>
                                 {/if}
+                                {elseif $TYPE == 'manager'}<a href="../actions/reviews/delete_review.php?id={$r.reviewid}"><button class="btn-u btn-u-red btn-large">Delete Review</button></a>
+								{/if}
                                 </a>Rating: {$r.rating}  </li>
                                 </ul>
                             </div>

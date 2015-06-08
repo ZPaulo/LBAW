@@ -247,8 +247,9 @@
             <!-- Home -->
             <li class=""><a href="homepage.php" class=""
               data-toggle=""> Home </a></li>
+			  {if $TYPE == 'manager'}
             <li class=""><a href="car_search.php" class=""
-              data-toggle=""> Fleet </a></li>
+              data-toggle=""> Fleet </a></li>{/if}
             <li class=""><a href="reviews.php" class=""
               data-toggle=""> Reviews </a></li>
             <!-- End Home -->
