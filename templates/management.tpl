@@ -1,5 +1,6 @@
 {include file='common/betterHeader.tpl'}
-<div class="breadcrumbs-v3 img-v1">
+
+<div class="breadcrumbs-v3 ">
 			<div class="container text-center">
 				<h1>Management</h1>
 			</div>
@@ -51,8 +52,7 @@
 				<!--/end Filters Container-->
 			</div>
 			<br> <br> <br> <br>
-
-
+	<script> getCarsByKeyword("focus");  </script>
 			<!--/end Grid Container-->
 		</div>
 

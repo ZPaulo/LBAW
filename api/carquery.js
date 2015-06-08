@@ -84,12 +84,43 @@ function getCarsByKeyword(search)
     carquery.init();
      
     $.getJSON(carquery.base_url+"?callback=?", {cmd:"getTrims", keyword: carSearch}, function(data) {
-
+    	
         var makes = data.Trims;
-        for (var i = 0; i < makes.length; i++)
-        {
-                        
-            alert(makes[i].year); //array com as specs do carro, os mais imp são
+
+        for (var key in makes) {
+        	console.log(makes[key].model_make_id);
+        	break;
+            /*
+            "make_display":"Dodge",
+            "model_name":"Viper SRT10",
+            "model_year":"2009",
+            "model_body":"Roadster",
+            "model_engine_cc":"8285",
+            "model_engine_fuel":"Gasoline - unleaded 95",
+            "model_transmission_type":"Manual",
+            "model_seats":"2",
+            "model_doors":"2",
+            "model_weight_kg":"1602",
+            "model_lkm_hwy":"11"
+            */
+        } 
+    });
+}
+
+function getCarsByKeyword(search)
+{
+    var carSearch = search;
+    var carquery = new CarQuery();
+
+    carquery.init();
+     
+    $.getJSON(carquery.base_url+"?callback=?", {cmd:"getTrims", model: carSearch}, function(data) {
+    	
+        var makes = data.Trims;
+
+        for (var key in makes) {
+        	console.log(makes[key].model_make_id);
+        	break;
             /*
             "make_display":"Dodge",
             "model_name":"Viper SRT10",

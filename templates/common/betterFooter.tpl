@@ -28,7 +28,7 @@
 						<!-- End Link List -->
 
 						<!-- Address -->
-						<div class="col-md-3 map-img md-margin-bottom-40">
+						<div class="col-md-3  md-margin-bottom-40">
 							<div class="headline">
 								<h2>Contact Us</h2>
 							</div>

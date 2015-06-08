@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="../plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
   href="../plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../plugins/noUiSlider/jquery.nouislider.css">
 <link rel="stylesheet"
 	href="../plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
 <link rel="stylesheet"

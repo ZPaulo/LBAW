@@ -1,5 +1,4 @@
-{include file='common/betterHeader.tpl'}
-
+{include file='common/betterHeader.tpl'} 
 
 <!--=== Content Part ===-->
 <div class="container content">
