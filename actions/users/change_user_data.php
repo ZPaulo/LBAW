@@ -17,7 +17,7 @@ $phone = $_POST ['phone'];
 $address = $_POST ['address'];
 
 try {
-	changeData($name,$email,$phone,$address);
+	changeData($name,$email,$phone,$address,$_SESSION['username']);
 } catch ( PDOException $e ) {
 	//TODO error handling
 

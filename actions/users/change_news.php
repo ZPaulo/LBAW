@@ -5,7 +5,7 @@ include_once ($BASE_DIR . 'database/users.php');
 
 if (! $_GET ['news']) {
 	try {
-	disableNews ();
+	disableNews ($_SESSION['username']);
 	} catch ( PDOException $e ) {
 	// TODO error handling
 	
@@ -17,7 +17,7 @@ if (! $_GET ['news']) {
 	header ( "Location: $BASE_URL" . 'pages/page_profile_settings.php' );
 } else {
 	try {
-		enableNews ();
+		enableNews ($_SESSION['username']);
 	} catch ( PDOException $e ) {
 		// TODO error handling
 		

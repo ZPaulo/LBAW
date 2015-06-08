@@ -1,12 +1,10 @@
 <?php
-  session_start();
-  include_once('../config/init.php');
-  include_once($BASE_DIR .'database/users.php');
-  
-  $user = getUser($_SESSION ['username']);
+session_start ();
+include_once ('../config/init.php');
+include_once ($BASE_DIR . 'database/users.php');
+$user = getUserfromId ( $_GET ['id'] );
 
-  $smarty->assign('user', $user);
-  
+$smarty->assign ( 'user', $user );
 
-  $smarty->display('user_profile.tpl');
+$smarty->display ( 'user_profile.tpl' );
 ?>

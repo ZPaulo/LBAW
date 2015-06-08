@@ -23,6 +23,14 @@
 					<div class="cbp-filter-item">
 						<a href="user_search.php">Search Users</a>
 					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="create_extra.php">Create Extra</a>
+					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="extra_search.php">Search Extras</a>
+					</div>
 				</div>
 				<!--/end Filters Container-->
 			</div>

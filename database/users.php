@@ -42,26 +42,26 @@
   	$stmt->execute(array($id));
   }
 
-  function changePassword($password) {
+  function changePassword($password,$username) {
   	global $conn;
   
   	$stmt = $conn->prepare("UPDATE pessoa SET hash = ? WHERE username = ?");
-  	$stmt->execute(array(sha1($password),$_SESSION ['username']));
+  	$stmt->execute(array(sha1($password),$username));
   
   }
-  function changeData($name,$email,$phone,$address) {
+  function changeData($name,$email,$phone,$address,$username) {
   	global $conn;
   
   	$stmt = $conn->prepare("UPDATE pessoa SET nome = ?, email = ?, ntelemovel = ?, morada = ?  WHERE username = ?");
-  	$stmt->execute(array($name,$email,$phone,$address,$_SESSION ['username']));
+  	$stmt->execute(array($name,$email,$phone,$address,$username));
   
   }
 
-  function addvisa ( $name, $card, $cvv, $year, $month ){
+  function addvisa ( $name, $card, $cvv, $year, $month ,$username){
   	global $conn;
   
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   
   	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
@@ -73,11 +73,11 @@
   	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
   }
 
-  function addmastercard ( $name, $card, $cvv, $year, $month ){
+  function addmastercard ( $name, $card, $cvv, $year, $month,$username ){
   	global $conn;
   
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   
   	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
@@ -89,21 +89,21 @@
   	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
   }
   
- function enableNews(){
+ function enableNews($username){
   	global $conn;
   	
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   	
   	$stmt = $conn->prepare("UPDATE cliente SET newsletter = TRUE WHERE clienteid = ?");
   	$stmt->execute(array($id));
   }
-  function disableNews(){
+  function disableNews($username){
   	global $conn;
   	 
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   	 
   	$stmt = $conn->prepare("UPDATE cliente SET newsletter = FALSE WHERE clienteid = ?");
@@ -111,11 +111,11 @@
   }
   
 
-  function getmastercard()  {
+  function getmastercard($username)  {
   	global $conn;
   	 
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   	 
   	$stmt = $conn->prepare("SELECT * FROM mastercard,opcoesdepagamento WHERE opcoesdepagamento.clienteid = ? AND opcoesdepagamento.opcoesdepagamentoid = mastercard.mastercardid ");
@@ -141,11 +141,11 @@ function deletemastercard($id){
   	$stmt->execute(array($id));
   }
 
-  function getvisa()  {
+  function getvisa($username)  {
   	global $conn;
   	 
   	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($_SESSION['username']));
+  	$stmt->execute(array($username));
   	$id = $stmt->fetch()['pessoaid'];
   	 
   	$stmt = $conn->prepare("SELECT * FROM visa,opcoesdepagamento WHERE opcoesdepagamento.clienteid = ? AND opcoesdepagamento.opcoesdepagamentoid = visa.visaid ");
@@ -171,9 +171,15 @@ function deletemastercard($id){
     return $stmt->fetch() == true;
   }
   
-  function searchManager($name) {
+function searchManager($name) {
   	global $conn;
-  	$stmt = $conn->prepare("SELECT username,gestor.gestorid FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaID = gestor.gestorID");
+  	$stmt = $conn->prepare("SELECT username,gestor.gestorid FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaid = gestor.gestorid	");
+  	$stmt->execute(array('%'.$name.'%'));
+  	return $stmt->fetchAll();
+  }
+  function searchClient($name) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT username,cliente.clienteid,nome,morada,email,ntelemovel FROM pessoa,cliente WHERE pessoa.username LIKE ? AND pessoa.pessoaID = cliente.clienteid");
   	$stmt->execute(array('%'.$name.'%'));
   	return $stmt->fetchAll();
   }

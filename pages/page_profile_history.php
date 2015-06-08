@@ -5,9 +5,12 @@ include_once ($BASE_DIR . 'database/users.php');
 include_once ($BASE_DIR . 'database/vehicle.php');
 include_once ($BASE_DIR . 'database/local.php');
 
-$user = getUser ( $_SESSION ['username'] );
+
+  $user = getUserfromId($_GET['id']);
 
 
+  $smarty->assign('user', $user);
+  
 
 $reservations =getReservations($user["pessoaid"]);
 

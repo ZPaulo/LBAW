@@ -9,13 +9,13 @@
 					<ul class="list-group sidebar-nav-v1 margin-bottom-40"
 						id="sidebar-nav-1">
 						<li class="list-group-item active"><a
-							href="page_profile_me.php"><i class="fa fa-user"></i>
+							href="page_profile_me.php?id={$user.pessoaid}"><i class="fa fa-user"></i>
 								Profile</a></li>
 						<li class="list-group-item"><a
-							href="page_profile_history.php"><i class="fa fa-history"></i>
+							href="page_profile_history.php?id={$user.pessoaid}"><i class="fa fa-history"></i>
 								History</a></li>
 						<li class="list-group-item"><a
-							href="page_profile_settings.php"><i class="fa fa-cog"></i>
+							href="page_profile_settings.php?id={$user.pessoaid}"><i class="fa fa-cog"></i>
 								Settings</a></li>
 					</ul>
 

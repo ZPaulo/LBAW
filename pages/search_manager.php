@@ -5,7 +5,6 @@
   
   $managers = searchManager($_GET['name']);
   
-  $smarty->assign('managers', $managers);
-  
+  $smarty->assign('managers', $managers); 
   $smarty->display('search_managers.tpl');
 ?>

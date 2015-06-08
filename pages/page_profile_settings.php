@@ -3,7 +3,7 @@
   include_once('../config/init.php');
   include_once($BASE_DIR .'database/users.php');
   
-  $user = getUser($_SESSION ['username']);
+  $user = getUserfromId($_GET['id']);
 
   
   $smarty->assign('user', $user);
@@ -13,11 +13,11 @@
 
   $smarty->assign('news',$newsletter["newsletter"]);
 
-  $mastercard = getmastercard();
+  $mastercard = getmastercard($_SESSION['username']);
   
   $smarty->assign('mastercard',$mastercard);
   
-  $visa = getvisa();
+  $visa = getvisa($_SESSION['username']);
   
   $smarty->assign('visa',$visa);
   

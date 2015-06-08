@@ -14,7 +14,7 @@ $password = $_POST ['password'];
 
 
 try {
-	changepassword ($password);
+	changepassword ($password,$_SESSION['username']);
 } catch ( PDOException $e ) {
 	//TODO error handling
 	

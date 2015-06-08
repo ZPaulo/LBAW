@@ -19,9 +19,9 @@ list ( $year, $month ) = explode ( "-", $_POST ['month'] );
 
 try {
 	if($option === "visa")
-		addvisa ($name, $card, $cvv, $year, $month );
+		addvisa ($name, $card, $cvv, $year, $month ,$_SESSION['username']);
 	if($option === "mastercard")
-		addmastercard ( $name, $card, $cvv, $year, $month );
+		addmastercard ( $name, $card, $cvv, $year, $month ,$_SESSION['username']);
 } catch ( PDOException $e ) {
 	// TODO error handling
 	
