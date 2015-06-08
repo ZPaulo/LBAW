@@ -77,17 +77,8 @@
         <!-- Topbar -->
         <div class="topbar">
           <ul class="loginbar pull-right">
-            <li class="hoverSelector"><i class="fa fa-globe"></i> <a>Languages</a>
-              <ul class="languages hoverSelectorBlock">
-                <li class="active"><a href="#">English <i
-                    class="fa fa-check"></i></a></li>
-                <li><a href="#">Spanish</a></li>
-                <li><a href="#">Russian</a></li>
-                <li><a href="#">German</a></li>
-              </ul></li>
-            <li class="topbar-devider"></li>
             {if $USERNAME}
-              <li><a href="../pages/page_login.php">{$USERNAME}</a></li>
+              <li><a href="../pages/page_profile_me.php">{$USERNAME}</a></li>
               <li class="topbar-devider"></li>
               <li> <a href="../actions/users/logout.php">Logout</a></li>
             {else}
@@ -253,7 +244,7 @@
         <div class="container">
           <ul class="nav navbar-nav">
             <!-- Home -->
-            <li class="active"><a href="index.html" class=""
+            <li class=""><a href="index.html" class=""
               data-toggle=""> Home </a></li>
             <li class=""><a href="car_search.html" class=""
               data-toggle=""> Fleet </a></li>
@@ -286,15 +277,6 @@
                 <li><a href="search_manager.php">Search Managers</a></li>
               </ul></li>
               {/if}
-            <li><i class="search fa fa-search search-btn"></i>
-              <div class="search-open">
-                <div class="input-group animated fadeInDown">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <span class="input-group-btn">
-                    <button id="go" class="btn-u" type="button">Go</button>
-                  </span>
-                </div>
-              </div></li>
             <!-- End Search Block -->
           </ul>
         </div>

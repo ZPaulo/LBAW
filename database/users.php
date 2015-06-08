@@ -31,6 +31,25 @@
     
 
   }
+  
+  
+
+  function createAdmin($username, $password) {
+  	global $conn;
+  
+  	$stmt = $conn->prepare("INSERT INTO pessoa VALUES (?, ?, ?, ?, ?, ?)");
+  	$stmt->execute(array('empty', $username, sha1($password), 'empty', '0', 'empty'));
+  
+  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE  username = ?");
+  	$stmt->execute(array($username));
+  	$id = $stmt->fetch()["pessoaid"];
+  
+  
+  	$stmt = $conn->prepare("INSERT INTO administrador VALUES (?)");
+  	$stmt->execute(array($id));
+  
+  
+  }
   function deleteManager($id) {
   	global $conn;
   
@@ -39,6 +58,17 @@
   
   
   	$stmt = $conn->prepare("DELETE FROM gestor WHERE gestorid = ?");
+  	$stmt->execute(array($id));
+  }
+
+  function deleteAdmin($id) {
+  	global $conn;
+  
+  	$stmt = $conn->prepare("DELETE FROM pessoa WHERE pessoaid = ?");
+  	$stmt->execute(array($id));
+  
+  
+  	$stmt = $conn->prepare("DELETE FROM administrador WHERE administradorid = ?");
   	$stmt->execute(array($id));
   }
 
@@ -168,6 +198,12 @@ function deletemastercard($id){
 function searchManager($name) {
   	global $conn;
   	$stmt = $conn->prepare("SELECT username,gestor.gestorid FROM pessoa,gestor WHERE pessoa.username LIKE ? AND pessoa.pessoaid = gestor.gestorid	");
+  	$stmt->execute(array('%'.$name.'%'));
+  	return $stmt->fetchAll();
+  }
+  function searchAdmins($name) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT username,administrador.administradorid FROM pessoa,administrador WHERE pessoa.username LIKE ? AND pessoa.pessoaid = administrador.administradorid	");
   	$stmt->execute(array('%'.$name.'%'));
   	return $stmt->fetchAll();
   }

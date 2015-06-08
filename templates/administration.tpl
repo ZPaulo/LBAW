@@ -14,6 +14,14 @@
 		<div class="content-xs">
 			<div id="filters-container" class="cbp-l-filters-text content-xs">
 				<div class="cbp-filter-item">
+					<a href="search_admin.php">Search Administrator</a>
+				</div>
+				|
+				<div class="cbp-filter-item">
+					<a href="create_admin.php">Create Administrator</a>
+				</div>
+				|
+				<div class="cbp-filter-item">
 					<a href="create_manager.php">Create Manager</a>
 				</div>
 				|
