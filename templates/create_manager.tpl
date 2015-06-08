@@ -1,17 +1,4 @@
 {include file='common/betterHeader.tpl'}
-<!--=== Breadcrumbs ===-->
-<div class="breadcrumbs">
-	<div class="container">
-		<h1 class="pull-left">Create Manager</h1>
-		<ul class="pull-right breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="administration.html">Administration</a></li>
-			<li class="active">Create Manager</li>
-		</ul>
-	</div>
-</div>
-<!--/breadcrumbs-->
-<!--=== End Breadcrumbs ===-->
 
 <!--=== Content Part ===-->
 <div class="container content">

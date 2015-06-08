@@ -42,27 +42,34 @@
   	$stmt->execute(array($id));
   }
 
-  function changePassword($password,$username) {
+
+  function deleteCLient($id) {
   	global $conn;
   
-  	$stmt = $conn->prepare("UPDATE pessoa SET hash = ? WHERE username = ?");
-  	$stmt->execute(array(sha1($password),$username));
+  
+  	$stmt = $conn->prepare("UPDATE cliente SET hash = 'apagado' WHERE clientid = ?");
+  	$stmt->execute(array($id));
+  }
+  
+  
+  
+  function changePassword($password,$id) {
+  	global $conn;
+  
+  	$stmt = $conn->prepare("UPDATE pessoa SET hash = ? WHERE pessoaid = ?");
+  	$stmt->execute(array(sha1($password),$id));
   
   }
-  function changeData($name,$email,$phone,$address,$username) {
+  function changeData($name,$email,$phone,$address,$id) {
   	global $conn;
   
-  	$stmt = $conn->prepare("UPDATE pessoa SET nome = ?, email = ?, ntelemovel = ?, morada = ?  WHERE username = ?");
-  	$stmt->execute(array($name,$email,$phone,$address,$username));
+  	$stmt = $conn->prepare("UPDATE pessoa SET nome = ?, email = ?, ntelemovel = ?, morada = ?  WHERE pessoaid = ?");
+  	$stmt->execute(array($name,$email,$phone,$address,$id));
   
   }
 
-  function addvisa ( $name, $card, $cvv, $year, $month ,$username){
+  function addvisa ( $name, $card, $cvv, $year, $month ,$id){
   	global $conn;
-  
-  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($username));
-  	$id = $stmt->fetch()['pessoaid'];
   
   	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
   	$stmt->execute(array($id));
@@ -73,12 +80,8 @@
   	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
   }
 
-  function addmastercard ( $name, $card, $cvv, $year, $month,$username ){
+  function addmastercard ( $name, $card, $cvv, $year, $month,$id ){
   	global $conn;
-  
-  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE pessoa.username = ? ");
-  	$stmt->execute(array($username));
-  	$id = $stmt->fetch()['pessoaid'];
   
   	$stmt = $conn->prepare("INSERT INTO opcoesdepagamento (clienteid) VALUES (?)");
   	$stmt->execute(array($id));
@@ -89,22 +92,13 @@
   	$stmt->execute(array($conn->lastInsertId(opcoesdepagamento_opcoesdepagamentoid_seq),  $card, $name,  $month ,$year, $cvv));
   }
   
- function enableNews($username){
+ function enableNews($id){
   	global $conn;
-  	
-  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
-  	$stmt->execute(array($username));
-  	$id = $stmt->fetch()['pessoaid'];
-  	
   	$stmt = $conn->prepare("UPDATE cliente SET newsletter = TRUE WHERE clienteid = ?");
   	$stmt->execute(array($id));
   }
-  function disableNews($username){
+  function disableNews($id){
   	global $conn;
-  	 
-  	$stmt = $conn->prepare("SELECT pessoaid FROM pessoa WHERE username = ? ");
-  	$stmt->execute(array($username));
-  	$id = $stmt->fetch()['pessoaid'];
   	 
   	$stmt = $conn->prepare("UPDATE cliente SET newsletter = FALSE WHERE clienteid = ?");
   	$stmt->execute(array($id));

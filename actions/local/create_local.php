@@ -12,10 +12,9 @@ try {
     $_SESSION['error_messages'][] = 'Error creating local';
 
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL");
+    header( 'Location: ' . $_SERVER ['HTTP_REFERER']);
     exit;
 }
 
 header ( 'Location: ' . $_SERVER ['HTTP_REFERER'] );
-// header('Location: ' . $BASE_URL);
 ?>

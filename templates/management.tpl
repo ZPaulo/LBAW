@@ -17,7 +17,7 @@
 					</div>
 					|
 					<div class="cbp-filter-item">
-						<a href="car_search.php">Search Vehicles
+						<a href="car_search.php">Search Vehicles</a>
 					</div>
 					|
 					<div class="cbp-filter-item">

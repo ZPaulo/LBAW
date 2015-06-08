@@ -43,7 +43,7 @@
 									<p>Below are the name and email addresses on file for your
 										account.</p>
 									<br>
-									<form class="sky-form" id="sky-form" action="../actions/users/change_user_data.php" method="POST">
+									<form class="sky-form" id="sky-form" action="../actions/users/change_user_data.php?id={$currentId}" method="POST">
 										<!--Checkout-Form-->
 										<section><dt>
 											<strong>Your name </strong>
@@ -77,7 +77,7 @@
 
 										
 										<!--End Checkout-Form--><button class="btn-u" type="submit">Save Changes</button>
-										<button type="button" class="btn-u btn-u-red">Eliminate Account</button>
+										<a href="../actions/users/delete_client.php?id={$currentId}"><button type="button" class="btn-u btn-u-red">Eliminate Account</button></a>
 									</form>
 									
 								</div>
@@ -86,7 +86,7 @@
 									<h2 class="heading-md">Manage your Security Settings</h2>
 									<p>Change your password.</p>
 									<br>
-									<form class="sky-form" id="sky-form" action="../actions/users/change_password.php" method="POST">
+									<form class="sky-form" id="sky-form" action="../actions/users/change_password.php?id={$currentId}" method="POST">
 										<!--Checkout-Form-->
 										<section>
 											<label class="input"> <input type="password" name="password"
@@ -127,7 +127,7 @@
 									{/foreach}
 									<br>
 									<h2 class="heading-md">Create payment option</h2>
-									<form class="sky-form" id="sky-form" action="../actions/users/create_payment_option.php" method="POST">
+									<form class="sky-form" id="sky-form" action="../actions/users/create_payment_option.php?id={$currentId}" method="POST">
 										<!--Checkout-Form-->
 										<section>
 											<div class="inline-group">
@@ -174,7 +174,7 @@
 									<h2 class="heading-md">Manage your Notifications.</h2>
 									<p>Below are the notifications you may manage.</p>
 									<br>
-									<form class="sky-form" id="sky-form3" action="../actions/users/change_news.php">
+									<form class="sky-form" id="sky-form3" method="post" action="../actions/users/change_news.php?id={$currentId}">
 										
 										<label class="toggle"><input type="checkbox"
 											{if $news}checked="" {/if} name="news"><i></i>Receive

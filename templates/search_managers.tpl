@@ -1,15 +1,4 @@
 {include file='common/betterHeader.tpl'}
-<!--=== Breadcrumbs ===-->
-<div class="breadcrumbs breadcrumbs-dark">
-	<div class="container">
-		<h1 class="pull-left">Search Managers</h1>
-		<ul class="pull-right breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="administration.php">Administration</a></li>
-			<li class="active">Search Managers</li>
-		</ul>
-	</div>
-</div>
 <!--=== End Breadcrumbs ===-->
 
 <!--=== Search Block Version 2 ===-->
