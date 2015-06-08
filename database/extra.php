@@ -6,7 +6,7 @@
     $stmt->execute(array($name,  $desc, $price));
 
   }
-  function searchExtra($name) {
+  function searchExtra($name) { 
 
   	global $conn;
   	
