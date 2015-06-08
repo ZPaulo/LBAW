@@ -194,6 +194,15 @@ function deletemastercard($id){
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch() == true;
   }
+
+  function isManagerCorrect($username, $password) {
+  	global $conn;
+  	$stmt = $conn->prepare("SELECT *
+                            FROM pessoa,gestor
+                            WHERE pessoa.username = ? AND pessoa.pessoaID = gestor.gestorid AND pessoa.hash = ?");
+  	$stmt->execute(array($username, sha1($password)));
+  	return $stmt->fetch() == true;
+  }
   
 function searchManager($name) {
   	global $conn;
