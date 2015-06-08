@@ -22,6 +22,10 @@ if (isClientCorrect ( $username, $password )) {
 	$_SESSION ['username'] = $username;
 	$_SESSION ['type'] = 'admin';
 	$_SESSION ['success_messages'] [] = 'Login successful';
+} else if (isManagerCorrect ( $username, $password )) {
+	$_SESSION ['username'] = $username;
+	$_SESSION ['type'] = 'manager';
+	$_SESSION ['success_messages'] [] = 'Login successful';
 } else {
 	$_SESSION ['error_messages'] [] = 'Login failed';
 }

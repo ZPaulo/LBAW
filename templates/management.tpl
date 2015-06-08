@@ -31,6 +31,22 @@
 					<div class="cbp-filter-item">
 						<a href="extra_search.php">Search Extras</a>
 					</div>
+					<br>
+					<div class="cbp-filter-item">
+						<a href="brand_search.php">Search Brands</a>
+					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="create_brand.php">Create Brand</a>
+					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="model_search.php">Search Models</a>
+					</div>
+					|
+					<div class="cbp-filter-item">
+						<a href="create_model.php">Create Model</a>
+					</div>
 				</div>
 				<!--/end Filters Container-->
 			</div>

@@ -78,17 +78,8 @@
         <!-- Topbar -->
         <div class="topbar">
           <ul class="loginbar pull-right">
-            <li class="hoverSelector"><i class="fa fa-globe"></i> <a>Languages</a>
-              <ul class="languages hoverSelectorBlock">
-                <li class="active"><a href="#">English <i
-                    class="fa fa-check"></i></a></li>
-                <li><a href="#">Spanish</a></li>
-                <li><a href="#">Russian</a></li>
-                <li><a href="#">German</a></li>
-              </ul></li>
-            <li class="topbar-devider"></li>
             {if $USERNAME}
-              <li><a href="../pages/page_login.php">{$USERNAME}</a></li>
+              <li><a href="../pages/page_profile_me.php">{$USERNAME}</a></li>
               <li class="topbar-devider"></li>
               <li> <a href="../actions/users/logout.php">Logout</a></li>
             {else}
@@ -254,10 +245,12 @@
         <div class="container">
           <ul class="nav navbar-nav">
             <!-- Home -->
-            <li class="active"><a href="index.html" class=""
+            <li class=""><a href="homepage.php" class=""
               data-toggle=""> Home </a></li>
-            <li class=""><a href="car_search.html" class=""
+            <li class=""><a href="car_search.php" class=""
               data-toggle=""> Fleet </a></li>
+            <li class=""><a href="reviews.php" class=""
+              data-toggle=""> Reviews </a></li>
             <!-- End Home -->
 
             <!-- Pages -->
@@ -268,34 +261,33 @@
                 <li><a href="page_profile_me.php">Overview</a></li>
                 <li><a href="page_profile_history.php">History</a></li>
                 <li><a href="page_profile_settings.php">Settings</a></li>
-              </ul></li>{elseif $TYPE == 'admin'}
+              </ul></li>{elseif $TYPE == 'manager'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
-              onclick="window.location = 'management.html'"> Management </a>
+              onclick="window.location = 'management.php'"> Management </a>
               <ul class="dropdown-menu">
-                <li><a href="create_local.html">Create Location</a></li>
-                <li><a href="create_vehicle.html">Create Vehicle</a></li>
-                <li><a href="car_search.html">Search Vehicles</a></li>
-                <li><a href="user_search.html">Search Users</a></li>
-              </ul></li>
+                <li><a href="create_local.php">Create Location</a></li>
+                <li><a href="create_vehicle.php">Create Vehicle</a></li>
+                <li><a href="car_search.php">Search Vehicles</a></li>
+                <li><a href="user_search.php">Search Users</a></li>
+                <li><a href="create_extra.php">Create Extra</a></li>
+                <li><a href="extra_search.php">Search Extras</a></li>
+                <li><a href="brand_search.php">Search Brands</a></li>
+                <li><a href="create_brand.php">Create Brand</a></li>
+                <li><a href="model_search.php">Search Model</a></li>
+                <li><a href="create_model.php">Create Model</a></li>
+              </ul></li>{elseif $TYPE == 'admin'}
             <li class="dropdown"><a href="javascript:void(0);"
               class="dropdown-toggle" data-toggle="dropdown"
               onclick="window.location = 'administration.php'">
                 Administration </a>
               <ul class="dropdown-menu">
+                <li><a href="search_admin.php">Search Admins</a></li>
+                <li><a href="create_admin.php">Create Admins</a></li>
                 <li><a href="create_manager.php">Create Manager</a></li>
                 <li><a href="search_manager.php">Search Managers</a></li>
               </ul></li>
               {/if}
-            <li><i class="search fa fa-search search-btn"></i>
-              <div class="search-open">
-                <div class="input-group animated fadeInDown">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <span class="input-group-btn">
-                    <button id="go" class="btn-u" type="button">Go</button>
-                  </span>
-                </div>
-              </div></li>
             <!-- End Search Block -->
           </ul>
         </div>
