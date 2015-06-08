@@ -1,13 +1,25 @@
 {include file='common/betterHeader.tpl'}
 <!--=== End Breadcrumbs ===-->
 
+{literal}
+<script >
+function validateForm() {
+    var x = document.forms["search"]["name"].value;
+    if (x.match(/.*\s.*$/)) {
+        alert("You cannot have spaces in query");
+        return false;
+    }
+}
+</script>
+{/literal}
+
 <!--=== Search Block Version 2 ===-->
 <div class="search-block">
 	<div class="container">
 		<div class="col-md-6 col-md-offset-3">
 			<h2>Search again</h2>
 			<div class="input-group">
-				<form action="" id="for"></form>
+				<form action="" id="for" name = "search" onsubmit="return validateForm()"></form>
 				<input type="text" class="form-control"
 					placeholder="Search Managers ..." name="name" form="for"> <span
 					class="input-group-btn">
