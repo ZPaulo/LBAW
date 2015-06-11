@@ -4,10 +4,10 @@
 	$(document).ready(function(){
         $('#return').click(function(){
             if($(this).prop("checked") == true){
-               	$('#s1').after('<section><label class="input"> <i class="icon-append glyphicon glyphicon-globe"></i> <input type="Location" name="dropoff" placeholder="Location"> <b class="tooltip tooltip-bottom-right">Enter postal code or city location</b></label></section>');
+               	$('#s1').after('<section><label class="input"> <i class="icon-append glyphicon glyphicon-globe"></i> <input type="Location" name="Location" placeholder="Location"> <b class="tooltip tooltip-bottom-right">Enter postal code or city location</b></label></section>');
 			}
         	else if($(this).prop("checked") == false){
-                $('#s1').next().hide();
+                $('#s1').next().remove();
             }
         });
     });
@@ -22,14 +22,14 @@
 		<!--=== End Slider ===-->
 		<div class="col-md-6">
 			<!-- Reg-Form -->
-			<form action="car_search.php" id="sky-form4" class="sky-form">
+			<form action="cars_search.php" id="sky-form4" class="sky-form">
 				<header>Rent now</header>
 
 				<fieldset>
 					<section id="s1">
 						<label class="input"> <i
 							class="icon-append glyphicon glyphicon-globe"></i> <input
-							type="Location" name="pickup" placeholder="Location"> <b
+							type="Location" name="Location" placeholder="Location"> <b
 							class="tooltip tooltip-bottom-right">Enter postal code or
 								city location</b>
 						</label>
@@ -50,6 +50,15 @@
 								</label>
 							</section>
 						</div>
+						<section>
+							<label class="select" ><select name="type" style="height: 45px;">
+									<option value="0" selected disabled>Car type:</option>
+									<option value="1">Economic</option>
+									<option value="2">Sport</option>
+									<option value="3">Other</option>
+							</select> <i style="top: 18px;"></i>
+							</label>
+						</section>
 					</section>
 				</fieldset>
 				<footer>
@@ -59,14 +68,14 @@
 			<!-- End Reg-Form -->
 		</div>
 		 <!-- Owl Clients v1 -->
-		<div class="container content-sm"> 
+		<div class="container content-sm">
 		<div class="row margin-bottom-30" style="margin-top: 50px">
         	<div class="col-md-4">
         		<div class="service">
                     <i class="fa fa-compress service-icon"></i>
         			<div class="desc">
-        				<h4>Fully Responsive</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        				<h4>Simple rents</h4>
+                        <p>Renting cars made easy, in just four simple steps you can do it. Choose your rent options, choose a car, extras, payment options and voilá, it's done!</p>
         			</div>
         		</div>	
         	</div>
@@ -74,8 +83,8 @@
         		<div class="service">
                     <i class="fa fa-cogs service-icon"></i>
         			<div class="desc">
-        				<h4>HTML5 + CSS3</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        				<h4>Full technical assistence</h4>
+                        <p>We offer full maintenance and assistence and will be there when you need us.</p>
         			</div>
         		</div>	
         	</div>
@@ -84,7 +93,7 @@
                     <i class="fa fa-rocket service-icon"></i>
         			<div class="desc">
         				<h4>Launch Ready</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+                        <p>After you rent a car it's ready for you to use it! </p>
         			</div>
         		</div>	
         	</div>			    
