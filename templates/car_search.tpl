@@ -148,13 +148,13 @@ $(document).ready(function(){
 											<div class="col-sm-4">
 												<a href="shop-ui-inner.html"><img
 													class="img-responsive sm-margin-bottom-20"
-													src="Shop-UI/assets/img/cars/product-1.png" alt=""></a>
+													src="http://cars.axlegeeks.com/sites/default/files/844/media/images/2014_Ford_Focus_SE_Hatch_906299.png" alt=""></a>
 											</div>
 											<div class="col-sm-8 product-description">
 												<div class="overflow-h margin-bottom-5">
 													<ul class="list-inline overflow-h">
 														<li><h4 class="title-price">
-																<a href="shop-ui-inner.html">{$v.nome} {$v.modelo}<span>|Intermediate</span></a>
+																<a href="">{$v.nome} {$v.modelo}<span>|Intermediate</span></a>
 															</h4></li>
 													</ul>
 													<div class="margin-bottom-10">
@@ -162,20 +162,20 @@ $(document).ready(function(){
 													</div>
 													<div class="features">
 														<p>
-															<img src="Shop-UI/assets/img/images/passenger-icon.png"
+															<img src="../images/assets/icons/passenger-icon.png"
 																alt="" />{$v.npassageiros} passengers
 														</p>
 														<p>
 															<img
-																src="Shop-UI/assets/img/images/transmission-icon.png"
+																src="../images/assets/icons/transmission-icon.png"
 																alt="" />{$v.transmissao} transmission
 														</p>
 														<p>
-															<img src="Shop-UI/assets/img/images/km_l-icon.png"
+															<img src="../images/assets/icons/km_l-icon.png"
 																alt="" />{$v.consumo}
 														</p>
 														<p>
-															<img src="Shop-UI/assets/img/images/air-icon.png" alt="" />{$v.descricao}
+															<img src="../images/assets/icons/video-play.png" alt="" />{$v.descricao}
 														</p>
 													</div>
 													<button type="button" class="btn-u">Rent</button>
